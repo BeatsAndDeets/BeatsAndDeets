@@ -1,0 +1,13 @@
+// Visibility Styles
+// ========================================
+
+// Hide/Show Classes
+.mobile--show{
+  display: block;
+  @include media($tablet-landscape){ display: none; }
+}
+
+.mobile--hide{
+  display: none;
+  @include media($tablet-landscape){ display: block; }
+}

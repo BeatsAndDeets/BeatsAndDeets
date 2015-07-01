@@ -2,22 +2,16 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading editable">Something</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<header role="region" aria-labelledby="beats-and-deets" class="page--header__home">
+  <div class="page--header-content">
+    <h1 id="beats-and-deets editable" class="title editable">Intro Header Goes Here</h1>
+    <p class="description editable">We bring the Beats and Deets together to deliver the best possible event with the least amount of stress.</p>
+    <a href="{{ site.baseurl }}services" class="button button--primary button__long">View Our Services</a>
+  </div>
+</header>
+<section class="page--section blue">
+  <div class="page--section-container">
+    <h4 class="page--section-title inverse editable">We are Beats <span class="slab">&amp;</span> Deets</h4>
+    <div class="title--border"></div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+// Typography Variables
+// ========================================
+
+  // Google Fonts
+  @import url("http://fonts.googleapis.com/css?family=Quicksand:400,700|Roboto+Slab:700,400");
+
+  // Font Families
+  $primary-sans-serif:   "Quicksand", Helvetica, sans-serif;
+  $primary-serif:        "Roboto Slab", Georgia, serif;
+
+  // Sizes
+  $font-size-base: 16px;
+
+  $s-giga:    65px;
+  $s-mega:    50px;
+
+  $s-alpha:   30px;
+  $s-bravo:   24px;
+  $s-charlie: 21px;
+  $s-delta:   18px;
+  $s-echo:    $font-size-base;
+  $s-foxtrot: 14px;
+  $s-golf:    12px;
+  $s-hotel:   11px;
+
+  // Line Heights
+  $base-line-height: $font-size-base * 1.5;
+  $base-line-small:  $font-size-base;

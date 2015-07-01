@@ -1,0 +1,30 @@
+{
+  "name": "BeatsAndDeets",
+  "version": "1.0.0",
+  "homepage": "beatsanddeets.com",
+  "authors": [
+    "beatsanddeets@gmail.com"
+  ],
+  "description": "Beats & Deets marketing website",
+  "main": "index.html",
+  "keywords": [
+    "wedding",
+    "venues",
+    "wedding",
+    "planning"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bourbon": "~4.2.3",
+    "neat": "~1.7.2",
+    "owl-carousel2": "~2.0.0-beta.3"
+  }
+}

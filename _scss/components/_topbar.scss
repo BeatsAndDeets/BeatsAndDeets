@@ -1,0 +1,202 @@
+// Topbar Component
+// ========================================
+
+
+// Theme Variables
+$topbar-background:       $white-base;
+$topbar-border:           3px solid $orange-base;
+$topbar-height:           120px;
+$topbar-padding:          22px;
+$topbar-width:            100%;
+$topbar-z-index:          1000;
+
+$topbar-mobile-height:    110px;
+
+$topbar-link-color:       $blue-base;
+
+$submenu-background:      $white-base;
+$submenu-border:          2px solid $blue-base;
+$submenu-height:          250px;
+$submenu-width:           200px;
+
+$mobile-link-background:  $blue-base;
+$mobile-link-height:      35px;
+$mobile-link-padding:     10px;
+$mobile-link-radius:      30em;
+$mobile-link-width:       35px;
+
+$mobile-panel-background: $white-base;
+$mobile-panel-link-color: $black-base;
+
+
+// Topbar Structure
+.topbar{
+  @include clearfix;
+  @include position(fixed, 0 null null null);
+  @include rem(padding, 20px $topbar-padding/2 $topbar-padding/2);
+  @include transition(top 0.3s ease-in-out);
+  background: $topbar-background;
+  border-bottom: $topbar-border;
+  height: $topbar-mobile-height;
+  width: $topbar-width;
+  z-index: 1000;
+
+  @include media($tablet-landscape){
+    @include rem(padding, $topbar-padding);
+    height: $topbar-height;
+  }
+
+  &.nav-down{
+    @include position(fixed, 0 0 null 0);
+    border-bottom: $topbar-border;
+    width: 100%;
+    z-index: $topbar-z-index;
+  }
+}
+
+.nav-up { top: -$topbar-height; }
+
+
+// Navigation
+.navigation{
+  @include clearfix;
+  @include outer-container;
+}
+
+.navigation--left{
+  @include media($tablet-landscape) { float: left; }
+
+  .logo{
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 200px;
+
+    @include media($tablet-landscape) { width: 225px; }
+  }
+}
+
+.navigation--right{
+  @include rem(margin-top, 15px);
+
+  @include media($tablet-landscape) { float: right; }
+
+  .nav-link {
+    @include position(relative);
+    @include rem(margin-bottom, 8px);
+    display: block;
+    text-transform: uppercase;
+
+    .button{
+      @include rem(margin-top, 20px);
+      display: block;
+      text-align: center;
+    }
+
+    @include media($tablet-landscape) {
+      @include rem(margin, 8px 20px 0 0);
+      @include s-golf;
+      color: $black-base;
+      display: inline-block;
+      padding: 0;
+      vertical-align: middle;
+
+      .button { @include s-golf; margin-top: 0; }
+
+      &:last-child{ margin-right: 0; }
+    }
+
+    a{
+      @include font-type($primary-serif, normal, 700);
+      color: $topbar-link-color;
+    }
+
+    .dropdown-icon {
+      margin-left: 5px;
+      margin-top: -2px;
+      vertical-align: middle;
+    }
+  }
+
+  .nav-link{ margin-top: -5px; }
+}
+
+
+.sub-menu{
+  @include animation(fade-in 0.2s ease-in);
+  @include box-shadow(0 3px 10px, rgba(0, 0, 0, 0.3));
+  @include position(absolute, 30px null null -100px);
+  @include rem(padding, 0 10px 10px);
+  @include rem(height, $submenu-height);
+  @include rem(width, $submenu-width);
+  background-color: $submenu-background;
+  border: $submenu-border;
+  overflow-y: scroll;
+  display: none;
+
+  .nav-link {
+    @include rem(padding, 15px 0);
+    border-bottom: 1px solid $grey-light;
+    display: block;
+    margin: 0;
+  }
+
+  &.is-active{ display: block; }
+}
+
+
+// Mobile Menu
+.mobile--link{
+  @include position(absolute, 40px null null 15px);
+  @include rem(height, $mobile-link-height);
+  @include rem(padding, $mobile-link-padding);
+  @include rem(width, $mobile-link-width);
+  @include transition(all 0.3s linear);
+  display: inline-block;
+
+  i { @include position(relative, 3px null null null); }
+}
+
+
+// Mobile Panel Stylesw
+.mobile--panel {
+  @include box-shadow(3px 0 10px, rgba(0, 0, 0, 0.2));
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(260px 100%);
+  @include rem(padding, $topbar-padding);
+  @include transform(translateX(-270px));
+  @include transition(all 0.25s linear);
+  background: $mobile-panel-background;
+  z-index: 999999;
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
+
+  @include media($tablet-landscape){
+    @include box-shadow(0 0 0, transparent);
+    @include position(relative);
+    @include transform(none);
+    background: none;
+    padding: 0;
+    width: inherit;
+  }
+
+  &.is-visible {
+    @include transform(translateX(0));
+  }
+
+  .logo{ @include rem(margin-bottom, 20px); width: 90%; }
+}
+
+.mobile--panel__fade-screen {
+  @include position(fixed, 0px 0px 0px 0px);
+  @include transition;
+  background: $black-base;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999997;
+
+  &.is-visible {
+    opacity: 0.75;
+    visibility: visible;
+  }
+}

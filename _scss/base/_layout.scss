@@ -1,0 +1,117 @@
+// Base Layout Styles
+// ========================================
+
+
+// Variables
+$page-header-background:    $blue-base;
+$page-header-color:         $white-base;
+$page-header-height:        650px;
+$page-header-offset:        100px;
+
+$page-header-mobile-height: 550px;
+
+$page-section-padding:      50px 0;
+
+$title-border-color:        $orange-base;
+$title-border-height:       4px;
+$title-border-width:        100px;
+
+
+// Global Styles
+html, body{ overflow-x: hidden; }
+
+
+// Page Header
+$page-header-home: '../../images/headers/home-header.jpg';
+
+$header-images: (
+  home  $page-header-home,
+);
+
+@each $header-image in $header-images{
+  $page-name:   nth($header-image, 1);
+  $image-name:  nth($header-image, 2);
+
+  .page--header__#{$page-name} {
+    @include background-size(cover);
+    @include clearfix;
+    @include position(relative);
+    @include rem(height, $page-header-mobile-height);
+    background: $blue-base url($image-name) center no-repeat;
+    overflow: hidden;
+
+    @include media($tablet-landscape) {
+      @include rem(height, $page-header-height);
+    }
+
+    &::after {
+      @include position(absolute, 0 0 0 0);
+      @include rem(height, $page-header-height);
+      background-color: $black-base;
+      display: block;
+      opacity: 0.45;
+    }
+  }
+}
+
+.page--header-content {
+  @include position(absolute, 80px null null null);
+  @include rem(padding, $page-header-offset 20px 0);
+  @include span-columns(4 of 4);
+  text-align: center;
+  z-index: 2;
+
+  @include media($tablet) {
+    @include span-columns(8 of 9);
+    @include shift(0.5 of 9);
+    top: 110px;
+  }
+
+  @include media($tablet-landscape) {
+    @include span-columns(6 of 12);
+    @include shift(3 of 12);
+    top: 125px;
+  }
+
+  .title,
+  .description {
+    @include rem(margin-bottom, 20px);
+    @include text-shadow(0 2px 3px, rgba(0, 0, 0, 0.5));
+    color: $page-header-color;
+  }
+
+  .title {
+    @include s-mega;
+    text-transform: uppercase;
+
+    @include media($tablet) { @include s-giga; }
+  }
+
+  .description { @include s-delta; }
+}
+
+
+// Page Section
+.page--section-container { @include outer-container; }
+
+.page--section {
+  @include rem(padding, $page-section-padding);
+
+  &.blue { background-color: $blue-base; }
+  &.tan { background-color: $tan-base; }
+}
+
+.page--section-title {
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+.title--border {
+  @include rem(width, $title-border-width);
+  @include rem(height, $title-border-height);
+  background-color: $title-border-color;
+  border-radius: 30em;
+  display: block;
+  margin: 0 auto;
+}

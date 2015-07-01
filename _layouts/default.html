@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   {% include head.html %}
-
   <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
+    {% include topbar.html %}
+    <main role="main" class="page">
+      {{ content }}
+    </main>
+    <script src="{{ site.baseurl }}js/topbar.js"></script>
   </body>
-
 </html>
