@@ -23,8 +23,6 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "bourbon": "~4.2.3",
-    "neat": "~1.7.2",
     "owl-carousel2": "~2.0.0-beta.3"
   }
 }
