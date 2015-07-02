@@ -2,7 +2,7 @@
 title: Beats & Deets | Wedding Planning Done Right
 email: beatsanddeets@gmail.com
 description: Wedding/event planning
-baseurl: / # the subpath of your site, e.g. /blog/
+baseurl: '' # the subpath of your site, e.g. /blog/
 url: beatsanddeets.com
 github:
   repo: https://github.com/BeatsAndDeets/BeatsAndDeets/
