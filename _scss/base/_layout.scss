@@ -12,6 +12,7 @@ $page-header-mobile-height: 550px;
 
 $page-section-padding:      50px 0;
 
+$title-color:               $tan-dark;
 $title-border-color:        $orange-base;
 $title-border-height:       4px;
 $title-border-width:        100px;
@@ -101,15 +102,20 @@ $header-images: (
   &.tan { background-color: $tan-base; }
 }
 
-.page--section-title {
+.page--section-header {
+  @include rem(margin-bottom, 40px);
   text-transform: uppercase;
   text-align: center;
   width: 100%;
 }
 
+.page--section-title {
+  color: $title-color;
+}
+
 .title--border {
-  @include rem(width, $title-border-width);
   @include rem(height, $title-border-height);
+  @include rem(width, $title-border-width);
   background-color: $title-border-color;
   border-radius: 30em;
   display: block;

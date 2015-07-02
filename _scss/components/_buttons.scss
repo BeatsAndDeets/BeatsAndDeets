@@ -49,7 +49,7 @@
 
 
   // Links
-  .link-#{$type} {
+  .link--#{$type} {
     @include transition(all 0.3s ease-in-out);
     color: $bg-1;
     font-style: inherit;
