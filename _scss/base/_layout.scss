@@ -50,7 +50,7 @@ $header-images: (
       @include rem(height, $page-header-height);
       background-color: $black-base;
       display: block;
-      opacity: 0.45;
+      opacity: 0.65;
     }
   }
 }
@@ -88,7 +88,7 @@ $header-images: (
     @include media($tablet) { @include s-giga; }
   }
 
-  .description { @include s-delta; }
+  .description {  @include rem(padding, 0 50px); @include s-delta; }
 }
 
 
