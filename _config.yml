@@ -21,7 +21,7 @@ sass:
   style: :compressed
 
 jekyll-press:
-  # exclude: 'atom.xml'
+  exclude: 'atom.xml'
   js_options: {}      # js minifier options
   css_options: {}     # css minifier options
   html_options: {}    # html minifier options
