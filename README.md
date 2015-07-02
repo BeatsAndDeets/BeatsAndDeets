@@ -1,2 +1,2 @@
 # BeatsAndDeets
-Marketing Website
+Marketing website for Beats & Deets
