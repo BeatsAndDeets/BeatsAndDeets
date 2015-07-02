@@ -4,6 +4,8 @@ email: beatsanddeets@gmail.com
 description: Wedding/event planning
 baseurl: / # the subpath of your site, e.g. /blog/
 url: beatsanddeets.com
+github:
+  repo: https://github.com/BeatsAndDeets/BeatsAndDeets/
 
 #Permalink styles
 permalink:           pretty
