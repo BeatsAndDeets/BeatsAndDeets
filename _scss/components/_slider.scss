@@ -103,7 +103,7 @@ $content-slider-padding:     75px 30px;
     @include rem(height, 50px);
     @include rem(width, 50px);
     @include transition(all 0.2s ease-in);
-    background: url('../../images/icons/next-button-icon.svg') no-repeat;
+    background: url('{{ base.siteurl }}/images/icons/next-button-icon.svg') no-repeat;
     background-size: 100%;
     display: block;
     opacity: 0.7;
