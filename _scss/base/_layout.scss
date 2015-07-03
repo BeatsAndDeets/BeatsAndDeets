@@ -24,12 +24,6 @@ html, body{ overflow-x: hidden; }
 .center { text-align: center; }
 
 // Page Header
-$page-header-home: '../../images/headers/home-header.jpg';
-
-$header-images: (
-  home  $page-header-home,
-);
-
 @each $header-image in $header-images{
   $page-name:   nth($header-image, 1);
   $image-name:  nth($header-image, 2);
