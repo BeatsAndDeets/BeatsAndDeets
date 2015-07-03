@@ -1,0 +1,47 @@
+// Footer Component
+// ========================================
+
+
+// Variables
+$footer-background:        $black-base;
+$footer-padding:           30px 0;
+
+$footer-navigation-margin: 0 auto 30px;
+
+$footer-link-color:        $white-base;
+$footer-link-margin:       0 20px;
+
+
+// Structure
+.footer {
+  @include rem(padding, $footer-padding);
+  background-color: $footer-background;
+  text-align: center;
+}
+
+.footer--logo {
+  @include rem(margin-bottom, 30px);
+  @include rem(width, 250px);
+}
+
+.footer--navigation {
+  @include rem(margin, $footer-navigation-margin);
+}
+
+.footer--navigation-link {
+  @include font-type($primary-serif, normal, 400);
+  @include rem(margin, $footer-link-margin);
+  color: $footer-link-color;
+  display: block;
+  text-transform: uppercase;
+
+  @include media($tablet) {
+    display: inline-block;
+  }
+}
+
+.footer--footnote {
+  @include font-type($primary-sans-serif, normal, 400);
+  @include s-hotel;
+  color: $white-base;
+}

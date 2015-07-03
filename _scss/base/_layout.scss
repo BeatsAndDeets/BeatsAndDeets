@@ -21,6 +21,7 @@ $title-border-width:        100px;
 // Global Styles
 html, body{ overflow-x: hidden; }
 
+.center { text-align: center; }
 
 // Page Header
 $page-header-home: '../../images/headers/home-header.jpg';
@@ -117,6 +118,7 @@ $header-images: (
   @include rem(height, $title-border-height);
   @include rem(width, $title-border-width);
   background-color: $title-border-color;
+  border: none;
   border-radius: 30em;
   display: block;
   margin: 0 auto;

@@ -1,0 +1,87 @@
+// Grid Component
+// ========================================
+
+
+// Variables
+$grid-container-offset:        50px auto;
+$grid-container-padding:       0 20px;
+
+$grid-item-border:             1px solid $tan-dark;
+$grid-item-padding:            30px 0;
+
+$grid-item-icon-dimensions:    100px;
+
+$grid-item-title-color:        $tan-dark;
+
+$grid-item-active-background:  $orange-base;
+
+
+// Structure
+.grid--list {
+  @include clearfix;
+  @include rem(margin, $grid-container-offset);
+  @include rem(padding, $grid-container-padding);
+}
+
+.grid--item-link {
+  border-bottom: $grid-item-border;
+  margin: 0 auto;
+  text-align: center;
+
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+
+    &:nth-child(even){ margin-right: 0; }
+
+    &:nth-child(odd){
+      border-right: $grid-item-border;
+      margin-right: 0;
+    }
+
+    &:last-child{ border-right: none; }
+  }
+
+  @include media($tablet-landscape) {
+    @include span-columns(4 of 12);
+    @include omega();
+
+    &:nth-child(odd) { border-right: none; }
+    &:nth-child(2),
+    &:nth-child(5),
+    &:nth-child(8){
+      border-left: $grid-item-border;
+      border-right: $grid-item-border;
+    }
+  }
+
+  &:hover {
+    background-color: $grid-item-active-background;
+
+    @include media($desktop) {
+      @include box-shadow(0 0 10px ,rgba(0, 0, 0, 0.5));
+      @include transform(scale(1.1));
+      opacity: 1;
+    }
+
+    .grid--item-title { color: $white-base; }
+  }
+}
+
+.grid--item {
+  @include rem(padding, $grid-item-padding);
+}
+
+.grid--item-icon {
+  @include rem(height, $grid-item-icon-dimensions);
+  @include rem(margin-bottom, 20px);
+  @include rem(width, $grid-item-icon-dimensions);
+  border: $grid-item-border;
+  border-radius: 30em;
+  display: inline-block;
+}
+
+.grid--item-title {
+  @include font-type($primary-sans-serif, normal, 700);
+  color: $grid-item-title-color;
+  text-transform: uppercase;
+}

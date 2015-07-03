@@ -25,3 +25,26 @@
     @include span-columns(7 of 12);
   }
 }
+
+.services-list--home {
+  @include media($tablet) { padding-left: 4.5%; }
+  @include media($tablet-landscape) { padding-left: 6.5%; }
+
+  .grid--item-link {
+
+    @include media($tablet) {
+      &:nth-child(5),
+      &:nth-child(6) {
+        border-bottom: none;
+      }
+    }
+
+    @include media($tablet-landscape){
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        border-bottom: none;
+      }
+    }
+  }
+}
