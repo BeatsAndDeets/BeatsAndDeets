@@ -157,7 +157,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
-  github-pages (= 37)
+  github-pages
   jekyll-gh-pages
   jekyll-press
   neat

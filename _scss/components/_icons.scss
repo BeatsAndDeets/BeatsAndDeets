@@ -1,0 +1,37 @@
+// Icons Components
+// ========================================
+
+
+// Social Media
+$social-media-height: 50px;
+$social-media-width:  50px;
+$social-media-icons:  url('../../images/icons/social-sprite.svg');
+
+%social-media-icon{
+  background-image: $social-media-icons;
+  background-size: 150px 50px;
+  background-repeat: no-repeat;
+  border: 2px solid $white-base;
+  border-radius: 20em;
+  display: inline-block;
+  height: $social-media-height;
+  text-indent: -99999px;
+  width: $social-media-width;
+}
+
+$social-medias: (
+  facebook  $social-media-width * 0,
+  instagram $social-media-width * 1,
+  twitter   $social-media-width * 2,
+);
+
+@each $social-media in $social-medias{
+  $name:      nth($social-media, 1);
+  $position:  nth($social-media, 2);
+
+  .#{$name}--icon{
+    background-position: -($position * 1) 0;
+    @extend %social-media-icon;
+    @include transition(all 0.4s ease-in-out);
+  }
+}

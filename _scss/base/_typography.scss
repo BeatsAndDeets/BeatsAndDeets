@@ -71,12 +71,12 @@ a {
 }
 
 blockquote {
-  @include font-type($primary-sans-serif, normal, 400);
+  @include font-type($primary-sans-serif, normal, 700);
   @include s-bravo;
 }
 
 cite {
-  @include font-type($primary-sans-serif, normal, 700);
+  @include font-type($primary-serif, normal, 700);
   @include rem(margin-top, 15px);
   @include s-foxtrot;
   display: block;

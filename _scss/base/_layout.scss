@@ -88,7 +88,12 @@ html, body{ overflow-x: hidden; }
 
 
 // Page Section
-.page--section-container { @include outer-container; }
+.page--section-container {
+  @include rem(padding, 0 20px);
+  @include outer-container;
+
+  @include media($tablet-landscape) { padding: 0; }
+}
 
 .page--section {
   @include rem(padding, $page-section-padding);

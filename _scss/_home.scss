@@ -48,3 +48,49 @@
     }
   }
 }
+
+.about-ad {
+  @include rem(padding, 75px 0);
+  background: $blue-base url('../images/ads/about-ad-img.jpg') no-repeat 50% 50%;
+  @include background-size(cover);
+}
+
+.about-ad--item {
+  @include rem(margin-bottom, 10px);
+  @include rem(padding, 0 20px);
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+    margin: 0;
+    padding: 0;
+  }
+
+  @include media($tablet-landscape) {
+    @include rem(margin-bottom, 10px);
+    @include span-columns(4 of 12);
+
+    &:nth-child(3n) { @include omega; }
+  }
+
+  .title,
+  .description { color: $white-base; }
+
+  .title {
+    @include rem(margin, 5px 0);
+    @include s-delta;
+  }
+
+  .description { @include s-foxtrot; line-height: normal; }
+}
+
+.about-ad--icon {
+  @include rem(height, 75px);
+  @include rem(margin, 0 10px 40px 0);
+  @include rem(width, 75px);
+  border: 2px solid $white-base;
+  border-radius: 30em;
+  display: block;
+  float: left;
+  text-indent: -9999px;
+}

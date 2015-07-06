@@ -3,11 +3,14 @@
 
 
 // Variables
+$carousel-offset:            0 auto 50px;
+
 $content-slider-background:  $orange-base;
-$content-slider-padding:     75px 30px;
+$content-slider-padding:     150px 30px;
 
 
 // Structure
+.owl-carousel { @include rem(margin, $carousel-offset); }
 .owl-carousel .animated {
   @include animation-duration(1000ms);
   @include animation-fill-mode(both);
@@ -21,7 +24,11 @@ $content-slider-padding:     75px 30px;
   @include rem(padding, $content-slider-padding);
   background-color: $content-slider-background;
 
-  .slider--content-item { background-color: $content-slider-background; }
+  .slider--content-item {
+    color: $white-base;
+    margin: 0 auto;
+    width: 80%;
+  }
 }
 
 .owl-carousel {
@@ -99,11 +106,11 @@ $content-slider-padding:     75px 30px;
 .owl-prev,
 .owl-next{
   @include media($tablet){
-    @include position(absolute, 37% null null null);
+    @include position(absolute, 50% null null null);
     @include rem(height, 50px);
     @include rem(width, 50px);
     @include transition(all 0.2s ease-in);
-    background: url('{{ base.siteurl }}/images/icons/next-button-icon.svg') no-repeat;
+    background: url('../../images/icons/next-button-icon.svg') no-repeat;
     background-size: 100%;
     display: block;
     opacity: 0.7;

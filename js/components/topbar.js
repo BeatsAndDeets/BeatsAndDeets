@@ -8,6 +8,11 @@ $(function() {
       e.preventDefault();
       $(this).siblings('.sub-menu').toggleClass('is-active');
     });
+
+    $('.sub-menu').bind('mousewheel', function(e){
+      $(this).scrollTop($(this).scrollTop()-e.originalEvent.wheelDeltaY);
+      return false;
+    });
   });
 
   // Mobile Menu

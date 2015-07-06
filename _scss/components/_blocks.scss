@@ -1,0 +1,115 @@
+// Block Components
+// ========================================
+
+
+// Variables
+$block-height:  220px;
+
+
+// Structure
+.block {
+  @include rem(height, $block-height);
+  @include rem(margin-bottom, 50px);
+  overflow: hidden;
+  text-align: center;
+}
+
+
+// Styles
+.block__big {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(9 of 9);
+  }
+
+  @include media($tablet-landscape) {
+    @include span-columns(8 of 12);
+  }
+}
+
+.block__small {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(9 of 9);
+  }
+
+  @include media($tablet-landscape) {
+    @include span-columns(4 of 12);
+  }
+}
+
+
+// Block Big Styles
+.block__big {
+
+  .block--image {
+    display: none;
+
+    @include media($tablet) {
+      @include span-columns(3 of 9);
+      display: block;
+    }
+
+    @include media($tablet-landscape) {
+      @include span-columns(3 of 8);
+    }
+  }
+
+  .block--content {
+    @include position(relative);
+    @include rem(height, $block-height);
+    @include span-columns(4 of 4);
+
+    &::before {
+      @include position(absolute, null null null -30px);
+      @include rem(height, $block-height);
+      @include rem(width, 30px);
+      background-color: $blue-base;
+      content: "";
+      z-index: -1;
+    }
+
+    &::after {
+      @include position(absolute, null null 30% -40px);
+      @include triangle(40px, $blue-base, left);
+      content: "";
+    }
+
+    @include media($tablet) {
+      @include span-columns(6 of 9);
+    }
+
+    @include media($tablet-landscape) {
+      @include span-columns(5 of 8);
+    }
+
+    .title {
+      @include rem(padding, 40px 10px 0);
+      @include s-bravo;
+    }
+
+    .description {
+      @include rem(margin-top, 15px);
+    }
+  }
+}
+
+.block__small {
+
+  .block--content {
+    @include rem(padding, 50px 20px);
+  }
+
+  .button { @include rem(margin-top, 20px); }
+}
+
+// Colors
+.block--content__blue {
+  background-color: $blue-base;
+}
+
+.block--content__tan {
+  background-color: $tan-dark;
+}
