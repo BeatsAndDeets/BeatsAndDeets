@@ -79,6 +79,17 @@
   }
 }
 
+.button--outline__white {
+  @include transition(all 0.3s ease-in-out);
+  border: 1px solid $white-base;
+  color: $white-base;
+
+  &:hover {
+    background-color: $white-base;
+    color: $blue-base !important;
+  }
+}
+
 
 // Button Sizes
 .button__long { @include rem(padding, 15px 40px); }

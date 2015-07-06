@@ -2,10 +2,12 @@
 // ========================================
 
 // Variables
-$page-header-home: '../../../images/headers/home-header.jpg';
+$page-header-home:    '../../../images/headers/home-header.jpg';
+$page-header-service: '../../../images/headers/service-header.jpg';
 
 
 // List
 $header-images: (
-  home  $page-header-home,
+  home     $page-header-home,
+  service  $page-header-service
 );

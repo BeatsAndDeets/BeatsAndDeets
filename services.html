@@ -2,4 +2,45 @@
 layout: default
 ---
 
-<h1>Services</h1>
+<header role="region" aria-labelledby="services" class="page--header__service">
+  <div class="page--header-content">
+    <h1 id="services" class="title editable">Intro Header Goes Here</h1>
+    <p class="description editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+</header>
+<section class="page--section blue">
+  <div class="page--section-container">
+    <header class="page--section-header">
+      <h4 class="page--section-title inverse editable">Your Vision. Our Team.</h4>
+      <hr class="title--border">
+    </header>
+    <div class="page--section-content">
+      <p class="page--section-content__center  inverse editable">Many people often spend months researching vendors, scheduling appointments, making deposits, and then tracking everything the day of to make sure all your hard work goes exactly how you planned it. We take all of that stress out by offering a one stop shop for all your event detailing and planning needs. We have called in the troops and have compiled an incredible team filled with creativity ready to tackle any event that comes our way.</p>
+    </div>
+  </div>
+</section>
+<section class="page--section tan">
+  <div class="page--section-container">
+    <header class="page--section-header">
+      <h4 class="page--section-title editable">What we offer</h4>
+      <hr class="title--border">
+    </header>
+    <div class="grid">
+      <ul class="grid--list services-list--service">
+        {% for service in site.data.services %}
+          <a href="{{base.siteurl}}/services/{{service.url}}" class="grid--item-link">
+            <li class="grid--item">
+              <i class="grid--item-icon {{service.icon}}"></i>
+              <h5 class="grid--item-title">{{ service.name }}</h5>
+            </li>
+          </a>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="page--section">
+  <div class="page--section-container">
+    {% include contact-big-ad.html %}
+  </div>
+</section>

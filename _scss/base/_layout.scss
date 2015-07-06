@@ -8,7 +8,7 @@ $page-header-color:         $white-base;
 $page-header-height:        650px;
 $page-header-offset:        100px;
 
-$page-header-mobile-height: 550px;
+$page-header-mobile-height: 575px;
 
 $page-section-padding:      50px 0;
 
@@ -86,6 +86,16 @@ html, body{ overflow-x: hidden; }
   .description {  @include rem(padding, 0 50px); @include s-delta; }
 }
 
+.page--section-content__center {
+  @include rem(padding, 0 20px);
+  @include span-columns(4 of 4);
+
+  @include media($tablet-landscape) {
+    @include span-columns(8 of 12);
+    @include shift(2 of 12);
+    padding: 0;
+  }
+}
 
 // Page Section
 .page--section-container {
