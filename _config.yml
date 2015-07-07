@@ -18,12 +18,13 @@ exclude:
   - "bower_components"
   - "bower.json"
 
-sass:
-  sass_dir: _scss
-  style: :compressed
-
-jekyll-press:
-  exclude: 'atom.xml'
-  js_options: {}      # js minifier options
-  css_options: {}     # css minifier options
-  html_options: {}    # html minifier options
+assets:
+  sources:
+    - _assets/javascript
+    - _assets/stylesheets
+    - _assets/images
+  compress:
+    css:  sass
+    js:   uglifier
+  cache:          true
+  gzip: [ text/css, application/javascript ]

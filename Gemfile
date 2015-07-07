@@ -1,8 +1,13 @@
 source 'https://rubygems.org'
 
-# Site Gems
+gem 'compass'
+gem 'jekyll'
+gem 'jekyll-assets'
+gem "uglifier"
+gem "sass"
+
 gem 'github-pages'
 gem 'jekyll-gh-pages'
-gem 'jekyll-press'
+
 gem 'bourbon'
 gem 'neat'
