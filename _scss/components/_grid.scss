@@ -8,7 +8,7 @@ $grid-container-padding:       0 20px;
 
 $grid-item-border:             1px solid $tan-dark;
 $grid-item-height:             250px;
-$grid-item-padding:            30px 10px;
+$grid-item-padding:            30px;
 
 $grid-item-icon-dimensions:    100px;
 
@@ -74,11 +74,7 @@ $grid-item-active-background:  $orange-base;
 }
 
 .grid--item-icon {
-  @include rem(height, $grid-item-icon-dimensions);
   @include rem(margin-bottom, 20px);
-  @include rem(width, $grid-item-icon-dimensions);
-  border: $grid-item-border;
-  border-radius: 30em;
   display: inline-block;
 }
 

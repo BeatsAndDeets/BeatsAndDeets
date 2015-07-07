@@ -5,36 +5,13 @@
   </header>
   <div class="page--section-content">
     <ul class="about-ad--list">
-      <li class="about-ad--item">
-        <i class="about-ad--icon">Attention</i>
-        <h5 class="title">One-on-one attention</h5>
-        <p class="description">Work with real professionals, not an online tool.</p>
-      </li>
-      <li class="about-ad--item">
-        <i class="about-ad--icon">Freedom</i>
-        <h5 class="title">Personal Freedom</h5>
-        <p class="description">One-stop-shop. Less time and stress meeting with multiple vendors!</p>
-      </li>
-      <li class="about-ad--item">
-        <i class="about-ad--icon">Experience</i>
-        <h5 class="title">Proven Experience</h5>
-        <p class="description">From weddings to parties, we got it covered.</p>
-      </li>
-      <li class="about-ad--item">
-        <i class="about-ad--icon">Deals</i>
-        <h5 class="title">Discounted Deals</h5>
-        <p class="description">Interested in multiple services? More you book, the deeper the discount.</p>
-      </li>
-      <li class="about-ad--item">
-        <i class="about-ad--icon">Ideas</i>
-        <h5 class="title">Innovative ideas</h5>
-        <p class="description">Working in multiple facets, it enables us to make sure all components of your event are working together.</p>
-      </li>
-      <li class="about-ad--item">
-        <i class="about-ad--icon">Passion</i>
-        <h5 class="title">Passion</h5>
-        <p class="description">We do what we do because we love it!</p>
-      </li>
+      {% for feature in site.data.features %}
+        <li class="about-ad--item">
+          <i class="about-ad--icon {{feature.icon}}--icon">{{feature.title}}</i>
+          <h5 class="title editable">{{feature.title}}</h5>
+          <p class="description editable">{{feature.description}}</p>
+        </li>
+      {% endfor %}
     </ul>
   </div>
 </div>

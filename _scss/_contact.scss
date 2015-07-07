@@ -1,0 +1,46 @@
+// Contact Page
+// ========================================
+
+
+// Variables
+$contact-link-color:  $white-base;
+$contact-link-margin: 30px;
+
+$textarea-height:     100px;
+
+$map-height:          500px;
+
+
+// Structure
+.contact-information--link{
+  @ex
+  display: inline-block;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    @include rem(margin-right, $contact-link-margin);
+
+    &::after {
+      @include rem(margin-left, 30px);
+      content: "|";
+    }
+  }
+}
+
+.contact-form--card {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(8 of 12);
+    @include shift(2 of 12);
+  }
+}
+
+.contact-form--textarea {
+  @include rem(height, $textarea-height);
+}
+
+#map-canvas {
+  @include rem(height, $map-height);
+  width: 100%;
+}

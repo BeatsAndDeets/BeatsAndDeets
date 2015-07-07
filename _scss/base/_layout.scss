@@ -6,6 +6,7 @@
 $page-header-background:    $blue-base;
 $page-header-color:         $white-base;
 $page-header-height:        650px;
+$page-header-height-small:  500px;
 $page-header-offset:        100px;
 
 $page-header-mobile-height: 575px;
@@ -38,6 +39,8 @@ html, body{ overflow-x: hidden; }
 
     @include media($tablet-landscape) {
       @include rem(height, $page-header-height);
+
+      &.small { @include rem(height, $page-header-height-small); }
     }
 
     &::after {
@@ -48,6 +51,14 @@ html, body{ overflow-x: hidden; }
       opacity: 0.65;
     }
   }
+}
+
+.page--header__color {
+  @include clearfix;
+  @include position(relative);
+  @include rem(height, $page-header-height-small);
+  background-color: $blue-base;
+  overflow: hidden;
 }
 
 .page--header-content {
@@ -110,6 +121,7 @@ html, body{ overflow-x: hidden; }
 
   &.blue { background-color: $blue-base; }
   &.tan { background-color: $tan-base; }
+  &.orange { background-color: $orange-base; }
 }
 
 .page--section-header {

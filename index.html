@@ -29,42 +29,14 @@ layout: default
     </header>
     <div class="grid">
       <ul class="grid--list services-list--home">
-        <a href="#" class="grid--item-link">
-          <li class="grid--item">
-            <i class="grid--item-icon"></i>
-            <h5 class="grid--item-title">Service Title</h5>
-          </li>
-        </a>
-        <a href="#" class="grid--item-link">
-          <li class="grid--item">
-            <i class="grid--item-icon"></i>
-            <h5 class="grid--item-title">Service Title</h5>
-          </li>
-        </a>
-        <a href="#" class="grid--item-link">
-          <li class="grid--item">
-            <i class="grid--item-icon"></i>
-            <h5 class="grid--item-title">Service Title</h5>
-          </li>
-        </a>
-        <a href="#" class="grid--item-link">
-          <li class="grid--item">
-            <i class="grid--item-icon"></i>
-            <h5 class="grid--item-title">Service Title</h5>
-          </li>
-        </a>
-        <a href="#" class="grid--item-link">
-          <li class="grid--item">
-            <i class="grid--item-icon"></i>
-            <h5 class="grid--item-title">Service Title</h5>
-          </li>
-        </a>
-        <a href="#" class="grid--item-link">
-          <li class="grid--item">
-            <i class="grid--item-icon"></i>
-            <h5 class="grid--item-title">Service Title</h5>
-          </li>
-        </a>
+        {% for service in site.data.services limit:6 %}
+          <a href="{{base.siteurl}}/services/{{service.url}}" class="grid--item-link">
+            <li class="grid--item">
+              <i class="grid--item-icon {{service.icon}}--icon"></i>
+              <h5 class="grid--item-title">{{ service.name }}</h5>
+            </li>
+          </a>
+        {% endfor %}
       </ul>
       <div class="page--section-content center">
         <a href="{{site.baseurl}}services" class="button button--primary button__large">View All Our Services</a>

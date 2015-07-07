@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header role="region" aria-labelledby="services" class="page--header__service">
+<header role="region" aria-labelledby="services" class="page--header__service small">
   <div class="page--header-content">
     <h1 id="services" class="title editable">Intro Header Goes Here</h1>
     <p class="description editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -15,7 +15,7 @@ layout: default
       <hr class="title--border">
     </header>
     <div class="page--section-content">
-      <p class="page--section-content__center  inverse editable">Many people often spend months researching vendors, scheduling appointments, making deposits, and then tracking everything the day of to make sure all your hard work goes exactly how you planned it. We take all of that stress out by offering a one stop shop for all your event detailing and planning needs. We have called in the troops and have compiled an incredible team filled with creativity ready to tackle any event that comes our way.</p>
+      <p class="page--section-content__center inverse editable">Many people often spend months researching vendors, scheduling appointments, making deposits, and then tracking everything the day of to make sure all your hard work goes exactly how you planned it. We take all of that stress out by offering a one stop shop for all your event detailing and planning needs. We have called in the troops and have compiled an incredible team filled with creativity ready to tackle any event that comes our way.</p>
     </div>
   </div>
 </section>
@@ -25,12 +25,12 @@ layout: default
       <h4 class="page--section-title editable">What we offer</h4>
       <hr class="title--border">
     </header>
-    <div class="grid">
+    <div class="grid service">
       <ul class="grid--list services-list--service">
         {% for service in site.data.services %}
           <a href="{{base.siteurl}}/services/{{service.url}}" class="grid--item-link">
             <li class="grid--item">
-              <i class="grid--item-icon {{service.icon}}"></i>
+              <i class="grid--item-icon {{service.icon}}--icon"></i>
               <h5 class="grid--item-title">{{ service.name }}</h5>
             </li>
           </a>

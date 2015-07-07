@@ -16,26 +16,16 @@
           </a>
           <ul class="sub-menu">
             <li class="nav-link"><a href="{{ site.baseurl }}/services">View All Services</a></li>
-            <li class="nav-link"><a href="#">Service 1</a></li>
-            <li class="nav-link"><a href="#">Service 2</a></li>
-            <li class="nav-link"><a href="#">Service 3</a></li>
-            <li class="nav-link"><a href="#">Service 4</a></li>
-            <li class="nav-link"><a href="#">Service 5</a></li>
-            <li class="nav-link"><a href="#">Service 6</a></li>
-            <li class="nav-link"><a href="#">Service 7</a></li>
-            <li class="nav-link"><a href="#">Service 8</a></li>
+            {% for service in site.data.services %}
+              <li class="nav-link"><a href="{{base.siteurl}}/services/{{service.url}}">{{ service.name }}</a></li>
+            {% endfor %}
           </ul>
         </li>
         <div class="mobile--show">
           <li class="nav-link"><a href="{{ site.baseurl }}/services">View All Services</a></li>
-          <li class="nav-link"><a href="#">Service 1</a></li>
-          <li class="nav-link"><a href="#">Service 2</a></li>
-          <li class="nav-link"><a href="#">Service 3</a></li>
-          <li class="nav-link"><a href="#">Service 4</a></li>
-          <li class="nav-link"><a href="#">Service 5</a></li>
-          <li class="nav-link"><a href="#">Service 6</a></li>
-          <li class="nav-link"><a href="#">Service 7</a></li>
-          <li class="nav-link"><a href="#">Service 8</a></li>
+          {% for service in site.data.services %}
+            <li class="nav-link"><a href="{{base.siteurl}}/services/{{service.url}}">{{ service.name }}</a></li>
+          {% endfor %}
         </div>
         <li class="nav-link"><a href="{{ site.baseurl }}/venues">Venues</a></li>
         <li class="nav-link"><a href="{{ site.baseurl }}/about">About Us</a></li>

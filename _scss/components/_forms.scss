@@ -5,27 +5,13 @@
 label {
   @include font-type($primary-sans-serif, normal, 700);
   @include rem(margin-bottom, 10px);
-  @include s-golf;
+  @include s-foxtrot;
   display: block;
   text-transform: capitalize;
 }
 
 fieldset {
-  @include rem(margin-bottom, 20px);
-
-  &.border {
-    @include rem(margin-bottom, 15px);
-    @include rem(padding-bottom, 15px);
-    border-bottom: 1px solid $grey-base;
-  }
-}
-
-.fieldset--action {
-  display: block;
-  margin-bottom: 0;
-  text-align: right;
-
-  .button { margin-bottom: 0 }
+  @include rem(margin-bottom, 50px);
 }
 
 .half-group { @include span-columns(6 of 12); }
@@ -37,12 +23,12 @@ input,
 select,
 textarea {
   @include appearance(none);
-  @include font-type($primary-sans-serif, normal, 300);
+  @include font-type($primary-serif, normal, 300);
   @include placeholder{ font-style: italic; }
-  @include s-golf;
+  @include s-foxtrot;
   background-color: $white-base;
-  border: 1px solid $grey-light;
-  border-radius: 2px;
+  border: none;
+  border-bottom: 1px solid $tan-dark;
   box-sizing: border-box;
   height: 40px;
   padding: 8px 6px;
@@ -52,7 +38,8 @@ textarea {
 
   &:focus {
     @include box-shadow(0 0 0, transparent);
-    border-color: $grey-light;
+    border-color: $blue-base;
+    color: $orange-base;
     outline: none;
   }
 
@@ -63,3 +50,5 @@ textarea {
     &:hover { cursor: disabled; }
   }
 }
+
+button { border: none; }

@@ -88,6 +88,11 @@ cite {
 }
 
 
+// Type Alignment
+.center { text-align: center }
+.left { text-align: left }
+.right { text-align: right }
+
 // Type Styles
 .slab { @include font-type($primary-serif, normal, 400); }
 

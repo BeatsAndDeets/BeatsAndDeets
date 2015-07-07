@@ -1,0 +1,22 @@
+// Card Component
+// ========================================
+
+
+// Variables
+$card-background:    $white-base;
+$card-border-radius: 3px;
+$card-offset:        20px;
+$card-padding:       40px 20px;
+$card-spread:        0 0 10px;
+$card-shadow:        rgba(0, 0, 0, 0.25);
+
+
+// Structure
+.card {
+  @include box-shadow($card-spread, $card-shadow);
+  @include rem(margin-top, $card-offset);
+  @include rem(padding, $card-padding);
+  background-color: $card-background;
+  border-radius: $card-border-radius;
+  clear: both;
+}
