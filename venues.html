@@ -1,5 +1,47 @@
 ---
 layout: default
+title: Beats & Deets preferred venues
 ---
 
-<h1>Venues</h1>
+<header role="region" aria-labelledby="venues" class="page--header__venues small">
+  <div class="page--header-content">
+    <h1 id="venues" class="title editable">Venues Header Goes Here</h1>
+    <p class="description editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+  </div>
+</header>
+<section class="page--section blue">
+  <div class="page--section-container">
+    <header class="page--section-header">
+      <h4 class="page--section-title inverse editable">Our promise to you</h4>
+      <hr class="title--border">
+    </header>
+    <div class="page--section-content">
+      <p class="page--section-content__center inverse editable">Many people often spend months researching vendors, scheduling appointments, making deposits, and then tracking everything the day of to make sure all your hard work goes exactly how you planned it. We take all of that stress out by offering a one stop shop for all your event detailing and planning needs. We have called in the troops and have compiled an incredible team filled with creativity ready to tackle any event that comes our way.</p>
+    </div>
+  </div>
+</section>
+<section class="page--section tan">
+  <div class="page--section-container">
+    <header class="page--section-header">
+      <h4 class="page--section-title editable">Discover your venue</h4>
+      <hr class="title--border">
+    </header>
+    <ul class="venues">
+      {% for venue in site.data.venues %}
+        <li class="card venue">
+          <div class="venue--content">
+            <h5 class="title">{{venue.name}}</h5>
+            <p class="description">{{venue.location}}</p><br>
+            <a href="{{venue.url}}" class="button button--secondary button__long" target="_blank">View Venue</a>
+          </div>
+          <div class="venue--image venue--image__{{venue.picture}}"></div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<section class="page--section reset-padding-bottom">
+  <div class="page--section-container">
+    {% include contact-big-ad.html %}
+  </div>
+</section>

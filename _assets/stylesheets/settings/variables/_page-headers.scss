@@ -2,13 +2,14 @@
 // ========================================
 
 // Variables
-$page-header-home:    asset_path('headers/home-header.jpg');
-$page-header-service: asset_path('headers/service-header.jpg');
-
+$page-header-home:     asset_path('headers/home-header.jpg');
+$page-header-service:  asset_path('headers/service-header.jpg');
+$page-header-venues:   asset_path('headers/service-header.jpg');
 
 
 // List
 $header-images: (
   home     $page-header-home,
-  service  $page-header-service
+  service  $page-header-service,
+  venues   $page-header-venues
 );

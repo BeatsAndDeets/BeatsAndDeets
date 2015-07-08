@@ -1,0 +1,14 @@
+- name: Cantigny Golf Course
+  location: Wheaton, IL
+  picture: cantigny
+  url: http://google.com
+
+- name: Highland Park Country Club
+  location: Highland Park, IL
+  picture: highland
+  url: http://google.com
+
+- name: Highland Park Country Club
+  location: Highland Park, IL
+  picture: highland
+  url: http://google.com

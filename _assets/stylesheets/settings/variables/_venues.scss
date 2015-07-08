@@ -1,0 +1,14 @@
+// Venue Variables
+// ========================================
+
+
+// Variables
+$venue-cantigny:  asset_path('venues/cantigny.jpg');
+$venue-highland:  asset_path('venues/highland.jpg');
+
+
+// List
+$venues: (
+  cantigny   $venue-cantigny,
+  highland   $venue-highland
+);

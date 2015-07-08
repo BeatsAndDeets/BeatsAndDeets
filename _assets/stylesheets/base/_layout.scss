@@ -6,7 +6,7 @@
 $page-header-background:    $blue-base;
 $page-header-color:         $white-base;
 $page-header-height:        650px;
-$page-header-height-small:  500px;
+$page-header-height-small:  550px;
 $page-header-offset:        100px;
 
 $page-header-mobile-height: 575px;
@@ -22,7 +22,14 @@ $title-border-width:        100px;
 // Global Styles
 html, body{ overflow-x: hidden; }
 
-.center { text-align: center; }
+
+// Resets
+.clear { clear: both; }
+.reset-padding-bottom { padding-bottom: 0 !important; }
+.reset-padding-left   { padding-left:   0 !important; }
+.reset-padding-right  { padding-right:  0 !important; }
+.reset-padding-top    { padding-top:    0 !important; }
+
 
 // Page Header
 @each $header-image in $header-images{

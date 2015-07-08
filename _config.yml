@@ -24,7 +24,7 @@ assets:
     - _assets/stylesheets
     - _assets/images
   compress:
-    css:  sass
-    js:   uglifier
-  cache:          true
+    css: sass
+    js: uglifier
+  cache: false
   gzip: [ text/css, application/javascript ]

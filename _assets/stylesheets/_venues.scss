@@ -1,0 +1,70 @@
+// Venues Page
+// ========================================
+
+
+// Variables
+$venue-title-border-background:   $blue-base;
+$venue-title-border-height:       6px;
+$venue-title-border-width:        60px;
+$venue-title-padding:             0 0 20px;
+
+$venue-image-height:              150px;
+
+
+// Structure
+.venue {
+  @include position(relative);
+  @include span-columns(4 of 4);
+  @include transition(all 0.5s ease-in-out);
+  overflow: hidden;
+  text-align: center;
+
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+
+    &:nth-child(2n) { @include omega(); }
+  }
+
+  &:hover {
+    @include box-shadow(0 0 15px, rgba(0, 0, 0, 0.25));
+  }
+
+  .title {
+    @include position(relative);
+    @include rem(padding, $venue-title-padding);
+    @include s-bravo;
+
+    &::after {
+      @include position(absolute, null 0 -4px 0);
+      @include rem(height, $venue-title-border-height);
+      @include rem(width, $venue-title-border-width);
+      background-color: $venue-title-border-background;
+      content: "";
+      display: inline-block;
+      margin: 0 auto ;
+    }
+  }
+}
+
+.venue--content,
+.venue--image {
+  @include span-columns(2 of 4);
+
+  @include media($tablet) {
+    @include span-columns(3 of 6);
+  }
+}
+
+// Venue Images
+@each $venue in $venues{
+  $venue-name: nth($venue, 1);
+  $venue-url: nth($venue, 2);
+
+  .venue--image__#{$venue-name} {
+    @include clearfix;
+    @include position(absolute, 0 0 0 null);
+    background: $blue-base url($venue-url) center no-repeat;
+    @include background-size(cover);
+    height: 100%;
+  }
+}
