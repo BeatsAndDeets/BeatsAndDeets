@@ -1,6 +1,19 @@
 ---
 layout: default
-title: Beats & Deets preferred venues
+title: Beats & Deets preferred wedding and party venues
+venues:
+  - name: Cantigny Golf Course
+    location: Wheaton, IL
+    picture: cantigny
+    url: http://google.com
+  - name: Highland Park Country Club
+    location: Highland Park, IL
+    picture: highland
+    url: http://google.com
+  - name: Highland Park Country Club
+    location: Highland Park, IL
+    picture: highland
+    url: http://google.com
 ---
 
 <header role="region" aria-labelledby="venues" class="page--header__venues small">
@@ -27,7 +40,7 @@ title: Beats & Deets preferred venues
       <hr class="title--border">
     </header>
     <ul class="venues">
-      {% for venue in site.data.venues %}
+      {% for venue in page.venues %}
         <li class="card venue">
           <div class="venue--content">
             <h5 class="title">{{venue.name}}</h5>

@@ -1,5 +1,43 @@
 ---
 layout: default
+features:
+  - title: One-on-one attention
+    description: Work with real professionals, not an online tool.
+    icon: attention
+  - title: Personal Freedom
+    description: One-stop-shop. Less time and stress meeting with multiple vendors!
+    icon: freedom
+  - title: Proven Experience
+    description: From weddings to parties, we got it covered.
+    icon: experience
+  - title: Discounted Deals
+    description: Interested in multiple services? More you book, the deeper the discount.
+    icon: deals
+  - title: Innovative ideas
+    description: Working in multiple facets, it enables us to make sure all components of your event are working together.
+    icon: ideas
+  - title: Passion
+    description: We do what we do because we love it!
+    icon: passion
+services:
+  - name: DJ
+    icon: dj
+    url: dj
+  - name: Uplighting
+    icon: uplighting
+    url: uplighting
+  - name: Musicians
+    icon: musicians
+    url: musicians
+  - name: Photobooth
+    icon: photobooth
+    url: photobooth
+  - name: Photography
+    icon: photography
+    url: photography
+  - name: Wedding Officiant
+    icon: officiant
+    url: officiant
 ---
 <header role="region" aria-labelledby="beats-and-deets" class="page--header__home">
   <div class="page--header-content">
@@ -28,7 +66,7 @@ layout: default
     </header>
     <div class="grid">
       <ul class="grid--list services-list--home">
-        {% for service in site.data.services limit:6 %}
+        {% for service in page.services %}
           <a href="{{site.baseurl}}/services/{{service.url}}" class="grid--item-link">
             <li class="grid--item">
               <i class="grid--item-icon {{service.icon}}--icon"></i>
