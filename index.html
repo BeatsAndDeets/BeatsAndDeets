@@ -29,7 +29,7 @@ layout: default
     <div class="grid">
       <ul class="grid--list services-list--home">
         {% for service in site.data.services limit:6 %}
-          <a href="{{base.siteurl}}/services/{{service.url}}" class="grid--item-link">
+          <a href="{{site.baseurl}}/services/{{service.url}}" class="grid--item-link">
             <li class="grid--item">
               <i class="grid--item-icon {{service.icon}}--icon"></i>
               <h5 class="grid--item-title">{{ service.name }}</h5>
@@ -38,7 +38,7 @@ layout: default
         {% endfor %}
       </ul>
       <div class="page--section-content center">
-        <a href="{{site.baseurl}}services" class="button button--primary button__large">View All Our Services</a>
+        <a href="{{site.baseurl}}/services" class="button button--primary button__large">View All Our Services</a>
       </div>
     </div>
   </div>
