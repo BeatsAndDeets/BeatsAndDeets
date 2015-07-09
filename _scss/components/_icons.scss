@@ -1,0 +1,116 @@
+// Icons Components
+// ========================================
+
+
+// Social Media Icons
+$social-media-height: 50px;
+$social-media-width:  50px;
+$social-media-icons:  '../../../images/icons/social-sprite.svg';
+
+%social-media-icon{
+  background-image: url($social-media-icons);
+  background-size: 150px 50px;
+  background-repeat: no-repeat;
+  border: 2px solid $white-base;
+  border-radius: 20em;
+  display: inline-block;
+  height: $social-media-height;
+  text-indent: -99999px;
+  width: $social-media-width;
+}
+
+$social-medias: (
+  facebook  $social-media-width * 0,
+  instagram $social-media-width * 1,
+  twitter   $social-media-width * 2,
+);
+
+@each $social-media in $social-medias {
+  $name:      nth($social-media, 1);
+  $position:  nth($social-media, 2);
+
+  .#{$name}--icon{
+    background-position: -($position * 1) 0;
+    @extend %social-media-icon;
+    @include transition(all 0.4s ease-in-out);
+  }
+}
+
+
+// Services Icons
+$service-height: 100px;
+$service-width:  100px;
+$service-icons:  '../../../images/icons/services-sprite.svg';
+
+%service-icon{
+  background-image: url($service-icons);
+  background-size: 1100px 200px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: $service-height;
+  text-indent: -99999px;
+  width: $service-width;
+}
+
+$services: (
+  dj             $service-width * 0,
+  uplighting     $service-width * 1,
+  musicians      $service-width * 2,
+  photobooth     $service-width * 3,
+  photography    $service-width * 4,
+  officiant      $service-width * 5,
+  planning       $service-width * 6,
+  innovation     $service-width * 7,
+  theme          $service-width * 8,
+  video          $service-width * 9,
+  website        $service-width * 10
+);
+
+@each $service in $services {
+  $name:      nth($service, 1);
+  $position:  nth($service, 2);
+
+  .#{$name}--icon{
+    background-position: -($position * 1) 0;
+    @extend %service-icon;
+    @include transition(all 0.4s ease-in-out);
+  }
+}
+
+
+// About Icons
+$feature-height:  75px;
+$feature-width:   75px;
+$feature-icons:   '../../../images/icons/about-sprite.svg';
+
+%feature-icon{
+  @include rem(height, $feature-height);
+  @include rem(margin, 0 10px 40px 0);
+  @include rem(width, $feature-width);
+  background-image: url($feature-icons);
+  background-size: 457px 76px;
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
+  text-indent: -9999px;
+}
+
+$features: (
+  attention    $feature-width * 0,
+  freedom      $feature-width * 1,
+  experience   $feature-width * 2,
+  deals        $feature-width * 3,
+  ideas        $feature-width * 4,
+  passion      $feature-width * 5
+);
+
+@each $feature in $features {
+  $name:      nth($feature, 1);
+  $position:  nth($feature, 2);
+
+  .#{$name}--icon{
+    background-position: -($position * 1) 0;
+    @extend %feature-icon;
+    @include transition(all 0.4s ease-in-out);
+  }
+}

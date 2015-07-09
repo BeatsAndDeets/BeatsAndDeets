@@ -1,0 +1,15 @@
+// Page Header Variables
+// ========================================
+
+// Variables
+$page-header-home:     '../../../images/headers/home-header.jpg';
+$page-header-service:  '../../../images/headers/service-header.jpg';
+$page-header-venues:   '../../../images/headers/service-header.jpg';
+
+
+// List
+$header-images: (
+  home     $page-header-home,
+  service  $page-header-service,
+  venues   $page-header-venues
+);

@@ -1,6 +1,6 @@
 *.DS_Store
 _site/
-js/components/
 .jekyll/
 .sass-cache/
 build/
+.bower_components/

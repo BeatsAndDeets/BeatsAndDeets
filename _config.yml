@@ -2,7 +2,7 @@
 title: Beats & Deets | Wedding Planning Done Right
 email: beatsanddeets@gmail.com
 description: Wedding/event planning
-baseurl: /BeatsAndDeets # the subpath of your site, e.g. /blog/
+baseurl: / # the subpath of your site, e.g. /blog/
 url: http://BeatsAndDeets.Github.io/BeatsAndDeets
 github:
   repo: https://github.com/BeatsAndDeets/BeatsAndDeets.git
@@ -11,20 +11,17 @@ github:
 permalink:           pretty
 relative_permalinks: true
 
+# Include Gems
+gems:      [bourbon, neat]
+
 # Build settings
 markdown: kramdown
 
 exclude:
   - "bower_components"
   - "bower.json"
+  - "build"
 
-assets:
-  sources:
-    - _assets/javascript
-    - _assets/stylesheets
-    - _assets/images
-  compress:
-    css: sass
-    js: uglifier
-  cache: false
-  gzip: [ text/css, application/javascript ]
+sass:
+  sass_dir: _scss
+  style: :compressed
