@@ -3,3 +3,4 @@ _site/
 .jekyll/
 .sass-cache/
 build/
+bower_components/
