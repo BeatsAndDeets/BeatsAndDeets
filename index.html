@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Beats & Deets event planning
+header_image: ../../images/headers/home-header.jpg
 features:
   - title: One-on-one attention
     description: Work with real professionals, not an online tool.
@@ -19,27 +21,8 @@ features:
   - title: Passion
     description: We do what we do because we love it!
     icon: passion
-services:
-  - name: DJ
-    icon: dj
-    url: dj
-  - name: Uplighting
-    icon: uplighting
-    url: uplighting
-  - name: Musicians
-    icon: musicians
-    url: musicians
-  - name: Photobooth
-    icon: photobooth
-    url: photobooth
-  - name: Photography
-    icon: photography
-    url: photography
-  - name: Wedding Officiant
-    icon: officiant
-    url: officiant
 ---
-<header role="region" aria-labelledby="beats-and-deets" class="page--header__home">
+<header role="region" aria-labelledby="beats-and-deets" class="page--header" style="background-image: url('{{page.header_image}}')">
   <div class="page--header-content">
     <h1 id="beats-and-deets" class="title editable">Intro Header Goes Here</h1>
     <p class="description editable">We bring the Beats and Deets together to deliver the best possible event with the least amount of stress.</p>
@@ -66,7 +49,7 @@ services:
     </header>
     <div class="grid">
       <ul class="grid--list services-list--home">
-        {% for service in page.services %}
+        {% for service in site.data.services limit:6 %}
           <a href="{{site.baseurl}}/services/{{service.url}}" class="grid--item-link">
             <li class="grid--item">
               <i class="grid--item-icon {{service.icon}}--icon"></i>

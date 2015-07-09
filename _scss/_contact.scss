@@ -13,17 +13,10 @@ $map-height:          500px;
 
 // Structure
 .contact-information--link{
-  @ex
   display: inline-block;
-  text-transform: uppercase;
 
   &:not(:last-child) {
     @include rem(margin-right, $contact-link-margin);
-
-    &::after {
-      @include rem(margin-left, 30px);
-      content: "|";
-    }
   }
 }
 

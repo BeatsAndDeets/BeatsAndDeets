@@ -95,6 +95,7 @@ cite {
 
 // Type Styles
 .slab { @include font-type($primary-serif, normal, 400); }
+.uppercase { text-transform: uppercase; }
 
 // Type Colors
 .inverse { color: $white-base; }

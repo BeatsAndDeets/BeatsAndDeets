@@ -1,13 +1,52 @@
 // Icons Components
 // ========================================
 
+// Contact Icons
+$contact-height: 50px;
+$contact-width:  50px;
+$contact-icons:  '../../../images/icons/contact-sprite.svg';
+
+%contact-icon {
+  background-image: url($contact-icons);
+  background-size: 96px 50px;
+  background-repeat: no-repeat;
+  border: 2px solid $white-base;
+  border-radius: 20em;
+  display: inline-block;
+  height: $contact-height;
+  text-indent: -99999px;
+  width: $contact-width;
+
+  &:hover {
+    @include transform(rotate(360deg));
+    background-color: $orange-base;
+    opacity: 1;
+  }
+}
+
+$contact-icons: (
+  telephone  $contact-width * 0,
+  mail       $contact-width * 1
+);
+
+@each $contact-icon in $contact-icons {
+  $name:      nth($contact-icon, 1);
+  $position:  nth($contact-icon, 2);
+
+  .#{$name}--icon{
+    background-position: -($position * 1) 0;
+    @extend %contact-icon;
+    @include transition(all 0.4s ease-in-out);
+  }
+}
+
 
 // Social Media Icons
 $social-media-height: 50px;
 $social-media-width:  50px;
 $social-media-icons:  '../../../images/icons/social-sprite.svg';
 
-%social-media-icon{
+%social-media-icon {
   background-image: url($social-media-icons);
   background-size: 150px 50px;
   background-repeat: no-repeat;
@@ -42,7 +81,7 @@ $service-height: 100px;
 $service-width:  100px;
 $service-icons:  '../../../images/icons/services-sprite.svg';
 
-%service-icon{
+%service-icon {
   background-image: url($service-icons);
   background-size: 1100px 200px;
   background-repeat: no-repeat;
@@ -83,7 +122,7 @@ $feature-height:  75px;
 $feature-width:   75px;
 $feature-icons:   '../../../images/icons/about-sprite.svg';
 
-%feature-icon{
+%feature-icon {
   @include rem(height, $feature-height);
   @include rem(margin, 0 10px 40px 0);
   @include rem(width, $feature-width);

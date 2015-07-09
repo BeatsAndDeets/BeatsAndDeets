@@ -1,0 +1,73 @@
+// Tabs Component
+// ========================================
+
+
+// Variables
+$tabs-background:        $grey-light;
+
+$tab-link-active-border: 3px solid $blue-base;
+$tab-link-color:         $tan-dark;
+$tab-link-color-hover:   $blue-base;
+$tab-link-padding:       30px 20px;
+
+$tab-content-background: $white-base;
+$tab-content-height:     300px;
+$tab-content-padding:    20px;
+
+
+// Structure
+.tabs {
+  @include clearfix;
+  background-color: $tabs-background;
+
+  .tab {
+    list-style: none;
+
+    @include media($tablet) {
+      display: inline;
+    }
+  }
+}
+
+.tab--link {
+  @include font-type($primary-sans-serif, normal, 700);
+  @include rem(padding, $tab-link-padding);
+  @include s-delta;
+  color: $tab-link-color;
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+
+  @include media($tablet) {
+    @include inline-block;
+    border-top: 0;
+  }
+
+  &:hover {
+    color: $tab-link-color-hover;
+    opacity: 1;
+  }
+
+  &:focus { outline: none; }
+
+  &.is--active {
+    border-top: $tab-link-active-border;
+    background-color: $tab-content-background;
+    @include media($tablet) {
+    }
+  }
+}
+
+.tab--content {
+  @include rem(height, $tab-content-height);
+  @include rem(padding, $tab-content-padding);
+  background-color: $tab-content-background;
+  display: none;
+  overflow: scroll;
+  width: 100%;
+
+  @include media($tablet) {
+    float: left;
+  }
+}
+

@@ -17,8 +17,8 @@ $(function() {
 
   // Mobile Menu
   $(function(){
-    $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function(e) {
-      e.preventDefault();
+    $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (event) {
+      event.preventDefault();
       $('.js-menu,.js-menu-screen').toggleClass('is-visible');
     });
   });

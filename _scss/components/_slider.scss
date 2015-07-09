@@ -9,6 +9,8 @@ $content-slider-background:       $orange-base;
 $content-slider-padding:          150px 30px;
 $content-slider-mobile-padding:   50px 30px;
 
+$image-slider-margin:             0 10px;
+
 
 // Structure
 .owl-carousel { @include rem(margin, $carousel-offset); }
@@ -33,6 +35,24 @@ $content-slider-mobile-padding:   50px 30px;
     color: $white-base;
     margin: 0 auto;
     width: 80%;
+  }
+}
+
+.slider--images {
+
+  .slider--images-item {
+    @include rem(margin, $image-slider-margin);
+    overflow: hidden;
+
+    @include media($tablet-landscape) {
+      @include rem(height, 400px);
+    }
+
+    @include media($tablet-landscape) {
+      @include rem(height, 500px);
+    }
+
+    img { width: 100%; }
   }
 }
 

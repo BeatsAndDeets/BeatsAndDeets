@@ -1,43 +1,10 @@
 ---
 layout: default
 title: Wedding and party services | Beats & Deets
-services:
-  - name: DJ
-    icon: dj
-    url: dj
-  - name: Uplighting
-    icon: uplighting
-    url: uplighting
-  - name: Musicians
-    icon: musicians
-    url: musicians
-  - name: Photobooth
-    icon: photobooth
-    url: photobooth
-  - name: Photography
-    icon: photography
-    url: photography
-  - name: Wedding Officiant
-    icon: officiant
-    url: officiant
-  - name: Event Planning / Cordination
-    icon: planning
-    url: planning
-  - name: Innovation / Program Design
-    icon: innovation
-    url: innovation
-  - name: Theme Development
-    icon: theme
-    url: theme
-  - name: Video Production
-    icon: video
-    url: video
-  - name: Event Website Design
-    icon: website
-    url: website
+header_image: ../../images/headers/service-header.jpg
 ---
 
-<header role="region" aria-labelledby="services" class="page--header__service small">
+<header role="region" aria-labelledby="services" class="page--header small" style="background-image: url('{{page.header_image}}')">
   <div class="page--header-content">
     <h1 id="services" class="title editable">Intro Header Goes Here</h1>
     <p class="description editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -62,7 +29,7 @@ services:
     </header>
     <div class="grid service">
       <ul class="grid--list services-list--service">
-        {% for service in page.services %}
+        {% for service in site.data.services %}
           <a href="{{site.baseurl}}/services/{{service.url}}" class="grid--item-link">
             <li class="grid--item">
               <i class="grid--item-icon {{service.icon}}--icon"></i>

@@ -1,0 +1,26 @@
+// Service Details Styles
+// ========================================
+
+
+// Variables
+$service-content-background: $white-base;
+$service-content-height:     380px;
+
+
+// Structure
+.service {
+
+  .service--content-left,
+  .service--content-right {
+    @include rem(height, $service-content-height);
+    @include span-columns(4 of 4);
+    background-color: $service-content-background;
+    overflow: hidden;
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+    }
+
+    img { width: 100%; }
+  }
+}

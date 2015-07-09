@@ -83,7 +83,7 @@ $mobile-panel-link-color: $black-base;
 
   .nav-link {
     @include position(relative);
-    @include rem(margin-bottom, 8px);
+    @include rem(margin-bottom, 20px);
     display: block;
     text-transform: uppercase;
 
@@ -94,20 +94,21 @@ $mobile-panel-link-color: $black-base;
     }
 
     @include media($tablet-landscape) {
-      @include rem(margin, 8px 20px 0 0);
+      @include rem(margin, 8px 25px 8px 0);
       @include s-golf;
       color: $black-base;
       display: inline-block;
       padding: 0;
       vertical-align: middle;
 
-      .button { @include s-golf; margin-top: 0; }
+      .button { @include s-foxtrot; margin-top: 0; }
 
       &:last-child{ margin-right: 0; }
     }
 
     a{
       @include font-type($primary-serif, normal, 700);
+      @include s-foxtrot;
       color: $topbar-link-color;
     }
 
@@ -168,7 +169,7 @@ $mobile-panel-link-color: $black-base;
   @include transition(all 0.25s linear);
   background: $mobile-panel-background;
   z-index: 999999;
-  overflow: visible;
+  overflow: scroll;
   -webkit-overflow-scrolling: touch;
 
   @include media($tablet-landscape){
@@ -177,6 +178,7 @@ $mobile-panel-link-color: $black-base;
     @include transform(none);
     background: none;
     padding: 0;
+    overflow: visible;
     width: inherit;
   }
 
@@ -184,7 +186,7 @@ $mobile-panel-link-color: $black-base;
     @include transform(translateX(0));
   }
 
-  .logo{ @include rem(margin-bottom, 20px); width: 90%; }
+  .logo{ @include rem(margin-bottom, 40px); width: 90%; }
 }
 
 .mobile--panel__fade-screen {
