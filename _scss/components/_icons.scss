@@ -5,7 +5,7 @@
 // Social Media Icons
 $social-media-height: 50px;
 $social-media-width:  50px;
-$social-media-icons:  '../../../images/icons/social-sprite.svg';
+$social-media-icons:  '{{site.baseurl}}/../../../images/icons/social-sprite.svg';
 
 %social-media-icon{
   background-image: url($social-media-icons);
@@ -40,7 +40,7 @@ $social-medias: (
 // Services Icons
 $service-height: 100px;
 $service-width:  100px;
-$service-icons:  '../../../images/icons/services-sprite.svg';
+$service-icons:  '{{site.baseurl}}/../../../images/icons/services-sprite.svg';
 
 %service-icon{
   background-image: url($service-icons);
@@ -81,7 +81,7 @@ $services: (
 // About Icons
 $feature-height:  75px;
 $feature-width:   75px;
-$feature-icons:   '../../../images/icons/about-sprite.svg';
+$feature-icons:   '{{site.baseurl}}/../../../images/icons/about-sprite.svg';
 
 %feature-icon{
   @include rem(height, $feature-height);

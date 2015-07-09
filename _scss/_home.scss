@@ -59,7 +59,7 @@
 // About Ad Section
 .about-ad {
   @include rem(padding, 75px 0);
-  background: $blue-base url('../../images/ads/about-ad-img.jpg') no-repeat 50% 50%;
+  background: $blue-base url('{{site.baseurl}}/../../images/ads/about-ad-img.jpg') no-repeat 50% 50%;
   @include background-size(cover);
 }
 
