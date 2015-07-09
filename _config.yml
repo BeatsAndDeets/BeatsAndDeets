@@ -1,27 +1,18 @@
-# Site settings
-title: Beats & Deets | Wedding Planning Done Right
-email: beatsanddeets@gmail.com
+title: "Beats & Deets | Wedding Planning Done Right"
+email: "beatsanddeets@gmail.com"
 description: Wedding/event planning
-baseurl: /BeatsAndDeets # the subpath of your site, e.g. /blog/
+baseurl: /BeatsAndDeets
 url: http://BeatsAndDeets.Github.io/BeatsAndDeets
 github:
-  repo: https://github.com/BeatsAndDeets/BeatsAndDeets.git
-
-#Permalink styles
-permalink:           pretty
+  repo: "https://github.com/BeatsAndDeets/BeatsAndDeets.git"
+permalink: pretty
 relative_permalinks: true
-
-# Include Gems
-gems:      []
-
-# Build settings
+gems: []
 markdown: kramdown
-
 exclude:
-  - "bower_components"
-  - "bower.json"
-  - "build"
-
+  - bower_components
+  - bower.json
+  - build
 sass:
   sass_dir: _scss
-  style: :compressed
+  style: ":compressed"
