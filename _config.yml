@@ -12,7 +12,7 @@ permalink:           pretty
 relative_permalinks: true
 
 # Include Gems
-gems:      [bourbon, neat]
+gems:      []
 
 # Build settings
 markdown: kramdown
