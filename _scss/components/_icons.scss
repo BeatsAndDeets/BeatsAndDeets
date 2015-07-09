@@ -4,7 +4,7 @@
 // Contact Icons
 $contact-height: 50px;
 $contact-width:  50px;
-$contact-icons:  '../../../images/icons/contact-sprite.svg';
+$contact-icons:  '../images/icons/contact-sprite.svg';
 
 %contact-icon {
   background-image: url($contact-icons);
@@ -44,7 +44,7 @@ $contact-icons: (
 // Social Media Icons
 $social-media-height: 50px;
 $social-media-width:  50px;
-$social-media-icons:  '../../../images/icons/social-sprite.svg';
+$social-media-icons:  '../images/icons/social-sprite.svg';
 
 %social-media-icon {
   background-image: url($social-media-icons);
@@ -79,7 +79,7 @@ $social-medias: (
 // Services Icons
 $service-height: 100px;
 $service-width:  100px;
-$service-icons:  '../../../images/icons/services-sprite.svg';
+$service-icons:  '../images/icons/services-sprite.svg';
 
 %service-icon {
   background-image: url($service-icons);
@@ -120,7 +120,7 @@ $services: (
 // About Icons
 $feature-height:  75px;
 $feature-width:   75px;
-$feature-icons:   '../../../images/icons/about-sprite.svg';
+$feature-icons:   '../images/icons/about-sprite.svg';
 
 %feature-icon {
   @include rem(height, $feature-height);

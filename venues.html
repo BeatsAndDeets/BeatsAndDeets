@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Beats & Deets preferred wedding and party venues
-header_image: ../../images/headers/home-header.jpg
+header_image: ../images/headers/home-header.jpg
 ---
 
 <header role="region" aria-labelledby="venues" class="page--header small" style="background-image: url('{{page.header_image}}')">
@@ -35,7 +35,7 @@ header_image: ../../images/headers/home-header.jpg
             <p class="description">{{venue.location}}</p><br>
             <a href="{{venue.url}}" class="button button--secondary button__long" target="_blank">View Venue</a>
           </div>
-          <div class="venue--image venue--image__{{venue.picture}}"></div>
+          <div class="venue--image" style="background-image: url(../images/venues/{{venue.picture}})"></div>
         </li>
       {% endfor %}
     </ul>

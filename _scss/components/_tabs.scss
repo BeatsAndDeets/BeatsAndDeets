@@ -39,7 +39,7 @@ $tab-content-padding:    20px;
   text-transform: capitalize;
 
   @include media($tablet) {
-    @include inline-block;
+    display: inline-block;
     border-top: 0;
   }
 

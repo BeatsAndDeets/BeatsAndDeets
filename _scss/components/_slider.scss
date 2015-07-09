@@ -134,7 +134,7 @@ $image-slider-margin:             0 10px;
   @include rem(height, 40px);
   @include rem(width, 40px);
   @include transition(all 0.2s ease-in);
-  background: url('../../images/icons/next-button-icon.svg') no-repeat;
+  background: url('../images/icons/next-button-icon.svg') no-repeat;
   background-size: 100%;
   display: block;
   opacity: 0.7;

@@ -55,16 +55,10 @@ $venue-image-height:              150px;
   }
 }
 
-// Venue Images
-@each $venue in $venues{
-  $venue-name: nth($venue, 1);
-  $venue-url: nth($venue, 2);
-
-  .venue--image__#{$venue-name} {
-    @include clearfix;
-    @include position(absolute, 0 0 0 null);
-    background: $blue-base url($venue-url) center no-repeat;
-    @include background-size(cover);
-    height: 100%;
-  }
+.venue--image {
+  @include clearfix;
+  @include position(absolute, 0 0 0 null);
+  background: $blue-base center no-repeat;
+  @include background-size(cover);
+  height: 100%;
 }
