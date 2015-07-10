@@ -1,8 +1,8 @@
 title: "Beats & Deets | Wedding Planning Done Right"
 email: "beatsanddeets@gmail.com"
 description: Wedding/event planning
-baseurl: /
-url: http://BeatsAndDeets.Github.io/BeatsAndDeets
+baseurl: ""
+url: "http://BeatsAndDeets.Github.io/BeatsAndDeets"
 github:
   repo: "https://github.com/BeatsAndDeets/BeatsAndDeets.git"
 permalink: pretty
