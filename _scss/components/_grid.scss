@@ -39,7 +39,7 @@ $grid-item-active-background:  $orange-base;
       margin-right: 0;
     }
 
-    &:last-child{ border-right: none; }
+    &:last-child { border-bottom: none; }
   }
 
   @include media($tablet-landscape) {
@@ -55,22 +55,26 @@ $grid-item-active-background:  $orange-base;
     &:nth-last-child(-n+2) { border-bottom: none; }
   }
 
-  &:hover {
-    background-color: $grid-item-active-background;
+  @include media($tablet-landscape) {
 
-    @include media($desktop) {
-      @include box-shadow(0 0 10px ,rgba(0, 0, 0, 0.5));
+    &:hover {
+      background-color: $grid-item-active-background;
+      @include box-shadow(0 0 10px ,rgba(0, 0, 0, 0.25));
       @include transform(scale(1.1));
       opacity: 1;
-    }
 
-    .grid--item-title { color: $white-base; }
+      .grid--item-title { color: $white-base; }
+    }
   }
 }
 
 .grid--item {
-  @include rem(padding, $grid-item-padding);
-  height: $grid-item-height;
+  @include rem(padding, $grid-item-padding / 5);
+
+  @include media($tablet) {
+    @include rem(padding, $grid-item-padding);
+    height: $grid-item-height;
+  }
 }
 
 .grid--item-icon {

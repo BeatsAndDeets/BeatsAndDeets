@@ -8,10 +8,13 @@ $block-height:  220px;
 
 // Structure
 .block {
-  @include rem(height, $block-height);
   @include rem(margin-bottom, 50px);
   overflow: hidden;
   text-align: center;
+
+  @include media($tablet) {
+    @include rem(height, $block-height);
+  }
 }
 
 

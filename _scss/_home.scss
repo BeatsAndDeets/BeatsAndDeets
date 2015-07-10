@@ -52,7 +52,9 @@
 }
 
 .grid--item:hover .grid--item-icon {
-  background-position-y: -100px;
+  @include media($tablet) {
+    background-position-y: -100px;
+  }
 }
 
 
