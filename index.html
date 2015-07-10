@@ -50,12 +50,7 @@ features:
     <div class="grid">
       <ul class="grid--list services-list--home">
         {% for service in site.data.services limit:6 %}
-          <a href="{{site.baseurl}}/services/{{service.url}}" class="grid--item-link">
-            <li class="grid--item">
-              <i class="grid--item-icon {{service.icon}}--icon"></i>
-              <h5 class="grid--item-title">{{ service.name }}</h5>
-            </li>
-          </a>
+          {% include service-item.html %}
         {% endfor %}
       </ul>
       <div class="page--section-content center">
