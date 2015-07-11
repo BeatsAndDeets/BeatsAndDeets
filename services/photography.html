@@ -21,6 +21,31 @@ reviews:
     name: Kesley Zahn
   - quote: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
     name: Anna Ryan
+prices:
+  - package: Package 1
+    price: $2,250
+    details:
+      - item: 1 Lead Photgrapher  
+      - item: 1 Assitant Photographer 
+      - item: Wedding Day coverage from preparation thru reception formalities 
+      - item: Digital files with print release
+  - package: Package 2
+    price: $2,750
+    details:
+      - item: 1 Lead Photgrapher  
+      - item: 1 Assitant Photographer 
+      - item: Wedding Day coverage from preparation thru reception formalities 
+      - item: Digital files with print release
+      - item: 10 x 10 Press Printed Book
+  - package: Package 3
+    price: $3,150
+    details:
+      - item: 1 Lead Photgrapher  
+      - item: 1 Assitant Photographer 
+      - item: Wedding Day coverage from preparation thru reception formalities 
+      - item: Digital files with print release
+      - item: 10 x 10 Press Printed Book
+      - item: (2) 8 x 8 Parent Albums
 ---
 
 <header role="region" aria-labelledby="services" class="small page--header editable" style="background-image: url('{{page.header_image}}')">
@@ -56,6 +81,24 @@ reviews:
     </header>
     <div class="page--section-content">
       <p class="page--section-content__center center inverse editable">We don’t really believe in prepacked pricing as every event is different and demands different solutions. We also know that budgets are an important part of the planning process. We have included a variety of packages to help you get a sense of your investment.</p>
+      <ul class="prices">
+        {% for price in page.prices %}
+          <li class="price card">
+            <h5 class="price--title">{{ price.package }}</h5>
+            <h3 class="price--cost">{{ price.price }}</h3>
+            <ul>
+              {% for detail in price.details %}
+                <li class="price--detail">{{ detail.item }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+      <footer class="page--section-content__center center">
+        <small class="inverse">* You Choose your favorite 70 images for the 10 x 10 Press Printed Book  <br> * To reserve your wedding date, a deposit of $300 must be made.  <br> * Look for deeper discounts when combining with any of our other services.</small>
+        <a href="{{site.baseurl}}/contact" role="button" class="button button--outline__white button__long price--button editable">Book A Photographer</a>
+      </footer>
+
     </div>
   </div>
 </section>
@@ -70,7 +113,7 @@ reviews:
 </section>
 <section class="page--section reset-padding-bottom">
   <div class="page--section-container">
-    <ul class="slider--content">
+    <!-- <ul class="slider--content">
       {% for review in page.reviews %}
          <li class="slider--content-item editable">
           <blockquote>&quot;{{review.quote}}&quot;
@@ -78,7 +121,8 @@ reviews:
           </blockquote>
         </li>
       {% endfor %}
-    </ul>
+    </ul> -->
+    {% include company-reviews.html %}
     {% include contact-big-ad.html %}
   </div>
 </section>

@@ -52,3 +52,37 @@ textarea {
 }
 
 button { border: none; }
+
+
+// Checkboxes
+input[type="checkbox"]{
+  @include position(relative);
+  @include rem(height, 14px);
+  @include rem(margin-right, 8px);
+  @include rem(margin-top, -1px);
+  @include rem(width, 17px);
+  @include transition();
+  background-color: $white-base;
+  border: 1px solid $grey-base;
+  border-radius: 2px;
+  display: inline-block;
+  float: left;
+  -webkit-appearance: none;
+
+  &:hover{ cursor: pointer; }
+
+  &:checked{
+    border: 1px solid $orange-base;
+
+    &:after{
+      @include position(absolute, 4px null null 2px);
+      @include rem(width, 12px);
+      @include transition(all 0.2s ease-in);
+      background-image: url('../images/icons/checkmark-icon.svg');
+      background-repeat: no-repeat;
+      border-radius: 2px;
+      content: '';
+      height: 100%;
+    }
+  }
+}

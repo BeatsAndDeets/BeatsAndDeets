@@ -10,18 +10,10 @@ $contact-icons:  '../images/icons/contact-sprite.svg';
   background-image: url($contact-icons);
   background-size: 96px 50px;
   background-repeat: no-repeat;
-  border: 2px solid $white-base;
-  border-radius: 20em;
   display: inline-block;
   height: $contact-height;
   text-indent: -99999px;
   width: $contact-width;
-
-  &:hover {
-    @include transform(rotate(360deg));
-    background-color: $orange-base;
-    opacity: 1;
-  }
 }
 
 $contact-icons: (

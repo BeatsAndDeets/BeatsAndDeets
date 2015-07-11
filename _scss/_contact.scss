@@ -13,10 +13,30 @@ $map-height:          500px;
 
 // Structure
 .contact-information--link{
-  display: inline-block;
+  @include span-columns(4 of 4);
+  display: block;
 
-  &:not(:last-child) {
-    @include rem(margin-right, $contact-link-margin);
+  @include media($tablet) {
+    @include span-columns(4 of 8);
+  }
+
+  &:hover .button i {
+    @include transform(rotate(360deg));
+    background-color: $orange-base;
+    border-right: none;
+    opacity: 1;
+  }
+
+  .button {
+    @include position(relative);
+    @include rem(padding-left, 55px);
+    display: block;
+
+    .telephone--icon,
+    .mail--icon {
+      @include position(absolute, 0 null null 0);
+      border-right: 1px solid $white-base;
+    }
   }
 }
 
@@ -27,6 +47,11 @@ $map-height:          500px;
     @include span-columns(8 of 12);
     @include shift(2 of 12);
   }
+}
+
+.contact-form--checkbox {
+  @include span-columns(4 of 8);
+  @include omega;
 }
 
 .contact-form--textarea {
