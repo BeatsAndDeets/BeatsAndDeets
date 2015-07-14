@@ -1,14 +1,119 @@
 - name: Cantigny Golf Course
   location: Wheaton, IL
   picture: cantigny.jpg
-  url: http://google.com
+  url: http://www.cantigny.org/private-events/weddings
 
 - name: Highland Park Country Club
   location: Highland Park, IL
   picture: highland.jpg
-  url: http://google.com
+  url: http://www.highlandparkcc.com/north-chicago-wedding-venue.html
 
-- name: Highland Park Country Club
-  location: Highland Park, IL
-  picture: highland.jpg
-  url: http://google.com
+- name: Oakbrook Bath and Tennis Club
+  location: Oakbrook, IL
+  picture: oakbrook.jpg
+  url: http://www.oak-brook.org/106/Weddings
+
+- name: School of Art Institute
+  location: Chicago, IL
+  picture: art-institue.jpg
+  url: http://www.saic.edu/saicballroomrental/
+
+- name: John Hancock Signature Room
+  location: Chicago, IL
+  picture: john-hancock.jpg
+  url: http://www.signatureroom.com/PrivateEvents
+
+- name: Salvage One
+  location: Chicago, IL
+  picture: salvage.jpg
+  url: http://salvageone.com/events.php
+
+- name: Stonegate
+  location: Hoffman Estates, IL
+  picture: stonegate.jpg
+  url: http://www.thestonegate.com/venue/banquet-centre/weddings
+
+- name: Bridges of Poplar Creek
+  location: Hoffman Estates, IL
+  picture: bridges.jpg
+  url: http://www.bridgesofpoplarcreek.com/weddings-events
+
+- name: Mill Creek Golf Club
+  location: Geneva, IL
+  picture: mill-creek.jpg
+  url: http://www.millcreekgolfcourse.com/weddings-events/
+
+- name: The Seville
+  location: Streamwood, IL
+  picture: seville.jpg
+  url: http://www.theseville.com/weddings
+
+- name: Kenilworth Club
+  location: Kenilworth, IL
+  picture: kenilworth.jpg
+  url: http://www.kenilworthclubweddings.com/
+
+- name: Byron Colby Barn
+  location: Grayslake, IL
+  picture: byron.jpg
+  url: http://libertyprairie.org/byron-colby-barn/
+
+- name: Geneva National Golf Club
+  location: Lake Geneva, WI
+  picture: lake-geneva.jpg
+  url: http://www.genevanationalresort.com/weddings/
+
+- name: The Avalon
+  location: Elk Grove Village, IL
+  picture: avalon.jpg
+  url: http://www.avalonbanquets.com/
+
+- name: Georgio Banquets
+  location: Orland Park, IL
+  picture: georgio.jpg
+  url: http://www.georgios.com/v1/events-photos/weddings/
+
+- name: Chateau Ritz
+  location: Niles, IL
+  picture: chateau.jpg
+  url: http://www.chateauritz.com/
+
+- name: Portage Park Theatre
+  location: Chicago, IL
+  picture: portage.jpg
+  url: http://www.theportagetheater.com/venue/
+
+- name: Holiday Inn
+  location: Carol Stream, IL
+  picture: holiday-inn.jpg
+  url: http://www.ihg.com/holidayinn/hotels/us/en/carol-stream/csril/hoteldetail/events-facilities
+
+- name: Victoria in the Park
+  location: Mount Prospect, IL
+  picture: victoria.jpg
+  url: http://www.victoriabanquets.com/home/
+
+- name: Wyndham Grand Riverfront
+  location: Chicago, IL
+  picture: wyndam.jpg
+  url: http://www.wyndhamgrandchicagoriverfront.com/weddings
+
+- name: Stan Mansion
+  location: Chicago, IL
+  picture: stan-mansion.jpg
+  url: http://stanmansion.com/chicago-wedding
+
+- name: Shores of Turtle Creek
+  location: Spring Grove, IL
+  picture: shores.jpg
+  url: http://shoresofturtlecreek.com/wp/weddings/
+
+- name: Katherine Legge
+  location: Hinsdale, IL
+  picture: katherine.jpg
+  url: http://www.villageofhinsdale.org/klm/
+
+- name: Dillmans Resort
+  location: Lac du Flambeau, WI
+  picture: dillmans.jpg
+  url: http://www.dillmans.com/events/weddings-sitecharges.html

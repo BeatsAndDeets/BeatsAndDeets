@@ -33,7 +33,9 @@ header_image: ../images/headers/home-header.jpg
           <div class="venue--content">
             <h5 class="title">{{venue.name}}</h5>
             <p class="description">{{venue.location}}</p><br>
-            <a href="{{venue.url}}" class="button button--secondary button__long" target="_blank">View Venue</a>
+            {% if venue.url %}
+              <a href="{{venue.url}}" class="button button--secondary button__long" target="_blank">View Venue</a>
+            {% endif %}
           </div>
           <div class="venue--image" style="background-image: url(../images/venues/{{venue.picture}})"></div>
         </li>

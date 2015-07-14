@@ -23,6 +23,12 @@ $title-border-width:        100px;
 html,
 body {
   overflow-x: hidden;
+
+  &.is-fixed {
+    @include position(absolute);
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 

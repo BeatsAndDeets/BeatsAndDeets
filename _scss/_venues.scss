@@ -3,6 +3,8 @@
 
 
 // Variables
+$venue-card-height:               250px;
+
 $venue-title-border-background:   $blue-base;
 $venue-title-border-height:       6px;
 $venue-title-border-width:        60px;
@@ -14,6 +16,7 @@ $venue-image-height:              150px;
 // Structure
 .venue {
   @include position(relative);
+  @include rem(height, $venue-card-height);
   @include span-columns(4 of 4);
   @include transition(all 0.5s ease-in-out);
   overflow: hidden;

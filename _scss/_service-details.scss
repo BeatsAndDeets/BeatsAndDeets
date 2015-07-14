@@ -9,7 +9,10 @@ $service-content-height:     380px;
 $price-title-border:         1px solid $grey-light;
 $price-title-color:          $tan-dark;
 
-$price-item-height:          450px;
+$price-title-alt-color:      $orange-base;
+
+$price-item-height-tablet:   400px;
+$price-item-height-desktop:  460px;
 
 $price-cost-background:      $orange-base;
 $price-cost-border-radius:   2px;
@@ -43,10 +46,22 @@ $price-cost-padding:         10px;
   clear: both;
 
   .price {
-    @include rem(min-height, $price-item-height);
     @include rem(margin, 30px auto);
-    @include span-columns(3 of 12);
+    @include span-columns(4 of 4);
     text-align: center;
+
+    @include media($tablet) {
+      @include rem(min-height, $price-item-height-tablet);
+      @include span-columns(2 of 4);
+      @include omega(2);
+    }
+
+    @include media($tablet-landscape) {
+      @include rem(min-height, $price-item-height-desktop);
+      @include span-columns(3 of 12);
+
+      &:nth-child(2) { margin-right: 2.35765%; }
+    }
   }
 }
 
@@ -58,6 +73,11 @@ $price-cost-padding:         10px;
   text-transform: uppercase;
 }
 
+.price--title__alt {
+  @include rem(margin-bottom, 5px);
+  color: $price-title-alt-color;
+}
+
 .price--cost {
   @include rem(padding, $price-cost-padding);
   background-color: $price-cost-background;
@@ -66,11 +86,13 @@ $price-cost-padding:         10px;
 }
 
 .price--detail {
+  @include font-type($primary-sans-serif, normal, 400);
   @include rem(margin-bottom, 10px);
   @include s-foxtrot;
+  line-height: normal;
 
   &::before {
-    content: "•  ";
+    content: "•  "; // Space was intended
   }
 }
 

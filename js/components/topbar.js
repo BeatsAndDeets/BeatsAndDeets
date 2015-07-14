@@ -20,6 +20,7 @@ $(function() {
     $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (event) {
       event.preventDefault();
       $('.js-menu,.js-menu-screen').toggleClass('is-visible');
+      $('html').toggleClass('is-fixed');
     });
   });
 
