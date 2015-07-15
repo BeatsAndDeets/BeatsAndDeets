@@ -6,7 +6,7 @@
 $carousel-offset:                 0 auto 50px;
 
 $content-slider-background:       $orange-base;
-$content-slider-padding:          150px 30px;
+$content-slider-padding:          100px 30px;
 $content-slider-mobile-padding:   50px 30px;
 
 $image-slider-margin:             0 10px;
@@ -24,8 +24,10 @@ $image-slider-margin:             0 10px;
 .owl-carousel .fadeOut { @include animation-name(fade-out) }
 
 .slider--content {
+  @include rem(margin-bottom, 50px);
   @include rem(padding, $content-slider-mobile-padding);
   background-color: $content-slider-background;
+  text-align: center;
 
   @include media($tablet) {
     @include rem(padding, $content-slider-padding);
@@ -36,6 +38,30 @@ $image-slider-margin:             0 10px;
     margin: 0 auto;
     width: 80%;
   }
+
+  .slider--header {
+    @include rem(margin-bottom, 50px);
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+
+    .title {
+      color: $white-base;
+    }
+  }
+
+
+
+  .title--border {
+    @include rem(height, 4px);
+    @include rem(width, 100px);
+    background-color: $white-base;
+    border: none;
+    border-radius: 30em;
+    display: block;
+    margin: 0 auto;
+  }
+
 }
 
 .slider--images {
@@ -141,7 +167,7 @@ $image-slider-margin:             0 10px;
   text-indent: -99999px;
 
   @include media($tablet) {
-    @include position(absolute, 45% null null null);
+    @include position(absolute, 20% null null null);
     @include rem(height, 50px);
     @include rem(width, 50px);
   }

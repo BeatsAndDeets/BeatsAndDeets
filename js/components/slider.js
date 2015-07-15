@@ -1,7 +1,7 @@
 $(function () {
 
   // Content Only Slider
-  $('.slider--content').owlCarousel({
+  $('.slider--content-items').owlCarousel({
     items: 1,
     loop: true,
     center: true,

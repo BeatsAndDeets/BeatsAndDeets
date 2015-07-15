@@ -15,6 +15,7 @@ $page-section-padding:      50px 0;
 
 $title-color:               $tan-dark;
 $title-border-color:        $orange-base;
+$title-border-color-alt:    $blue-base;
 $title-border-height:       4px;
 $title-border-width:        100px;
 
@@ -154,4 +155,6 @@ body {
   border-radius: 30em;
   display: block;
   margin: 0 auto;
+
+  &.blue { background-color: $title-border-color-alt; }
 }

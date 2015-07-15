@@ -1,9 +1,15 @@
-<ul class="slider--content">
-  {% for review in site.data.reviews %}
-    <li class="slider--content-item editable">
-      <blockquote>&quot;{{review.quote}}&quot;
-        <cite>{{review.name}}</cite>
-      </blockquote>
-    </li>
-  {% endfor %}
-</ul>
+<div class="slider--content">
+  <header class="slider--header">
+    <h4 class="title editable">Testimonials</h4>
+    <hr class="title--border" />
+  </header>
+  <ul class="slider--content-items">
+    {% for review in site.data.reviews %}
+      <li class="slider--content-item editable">
+        <blockquote>&quot;{{review.quote}}&quot;
+          <cite>{{review.name}}</cite>
+        </blockquote>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

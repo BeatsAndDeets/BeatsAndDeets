@@ -128,9 +128,9 @@ $feature-icons:   '../images/icons/about-sprite.svg';
 
 $features: (
   attention    $feature-width * 0,
-  freedom      $feature-width * 1,
-  experience   $feature-width * 2,
-  deals        $feature-width * 3,
+  deals        $feature-width * 1,
+  freedom      $feature-width * 2,
+  experience   $feature-width * 3,
   ideas        $feature-width * 4,
   passion      $feature-width * 5
 );
