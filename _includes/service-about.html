@@ -1,0 +1,19 @@
+<section class="page--section tan">
+  <div class="page--section-container service">
+    <div class="service--content-left">
+      <img src="{{site.baseurl}}/images/services/photography-sample-img.jpg">
+    </div>
+    <div class="service--content-right">
+      <ul class="tabs">
+        {% for detail in page.details %}
+          <li class="tab">
+          <a href="#" class="tab--link">{{ detail.title }}</a>
+          <div class="tab--content">
+            <p class="tab--content__paragraph">{{ detail.description }}</p>
+          </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

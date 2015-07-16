@@ -6,26 +6,13 @@
 $service-content-background: $white-base;
 $service-content-height:     380px;
 
-$price-title-border:         1px solid $grey-light;
-$price-title-color:          $tan-dark;
-
-$price-title-alt-color:      $orange-base;
-
-$price-item-height-tablet:   400px;
-$price-item-height-desktop:  460px;
-
-$price-cost-background:      $orange-base;
-$price-cost-border-radius:   2px;
-$price-cost-color:           $white-base;
-$price-cost-padding:         10px;
-
 
 // Structure
 .service {
 
   .service--content-left,
   .service--content-right {
-    @include rem(height, $service-content-height);
+    @include rem(min-height, $service-content-height);
     @include span-columns(4 of 4);
     background-color: $service-content-background;
     overflow: hidden;
@@ -36,66 +23,8 @@ $price-cost-padding:         10px;
 
     img { width: 100%; }
   }
+
+  .service--content-left { background-color: $tan-base; }
 }
 
 
-// Pricing Charts
-.prices {
-  @include clearfix;
-  @include rem(padding, 30px 0);
-  clear: both;
-
-  .price {
-    @include rem(margin, 30px auto);
-    @include span-columns(4 of 4);
-    text-align: center;
-
-    @include media($tablet) {
-      @include rem(min-height, $price-item-height-tablet);
-      @include span-columns(2 of 4);
-      @include omega(2);
-    }
-
-    @include media($tablet-landscape) {
-      @include rem(min-height, $price-item-height-desktop);
-      @include span-columns(3 of 12);
-
-      &:nth-child(2) { margin-right: 2.35765%; }
-    }
-  }
-}
-
-.price--title {
-  @include rem(padding-bottom, 15px);
-  @include s-delta;
-  border-bottom: $price-title-border;
-  color: $price-title-color;
-  text-transform: uppercase;
-}
-
-.price--title__alt {
-  @include rem(margin-bottom, 5px);
-  color: $price-title-alt-color;
-}
-
-.price--cost {
-  @include rem(padding, $price-cost-padding);
-  background-color: $price-cost-background;
-  border-radius: $price-cost-border-radius;
-  color: $price-cost-color;
-}
-
-.price--detail {
-  @include font-type($primary-sans-serif, normal, 400);
-  @include rem(margin-bottom, 10px);
-  @include s-foxtrot;
-  line-height: normal;
-
-  &::before {
-    content: "•  "; // Space was intended
-  }
-}
-
-.price--button {
-  @include rem(margin-top, 40px);
-}

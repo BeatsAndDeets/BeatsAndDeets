@@ -1,0 +1,36 @@
+<section class="page--section blue">
+  <div class="page--section-container">
+    <header class="page--section-header">
+      <h4 class="page--section-title inverse editable">Wedding Prepackaged Pricing</h4>
+      <hr class="title--border">
+    </header>
+    <div class="page--section-content">
+      <p class="page--section-content__center center inverse editable">We don’t really believe in prepacked pricing as every event is different and demands different solutions. We also know that budgets are an important part of the planning process. We have included a variety of packages to help you get a sense of your investment.</p>
+      <ul class="prices">
+        {% for price in page.prices %}
+          <li class="price card">
+            <h5 class="price--title">{{ price.package }}</h5>
+            {% if price.price %}
+              <h3 class="price--cost">{{ price.price }}</h3>
+            {% endif %}
+            <ul>
+              {% for detail in price.details %}
+                <li>
+                  {% if detail.alt_price %}
+                    <h5 class="price--title__alt">{{ detail.alt_price }}</h5>
+                  {% endif %}
+                  <p class="price--detail">{{ detail.item }}</p>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+      <footer class="page--section-content__center center">
+        <small class="inverse editable">* Ask about our referral discount – For every friend that you refer that books a wedding with us, you receive $100 off your Dj services or $50...CASH MONEY!! <br>
+        ** Combine with other services and receive even deeper dicounts!</small><br>
+        <a href="{{site.baseurl}}/contact" role="button" class="button button--outline__white button__long price--button editable">Book One of Musicians</a>
+      </footer>
+    </div>
+  </div>
+</section>

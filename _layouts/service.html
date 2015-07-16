@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include topbar.html %}
+    <main role="main" class="page page__service">
+      {% include service-header.html %}
+      {% include service-about.html %}
+      {% include pricing.html %}
+      {% include photo-slider.html %}
+      <section class="page--section reset-padding-bottom">
+        <div class="page--section-container">
+          {% include company-reviews.html %}
+          {% include contact-big-ad.html %}
+        </div>
+      </section>
+    </main>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>

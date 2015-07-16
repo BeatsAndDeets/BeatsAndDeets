@@ -59,11 +59,10 @@ $tab-content-padding:    20px;
 }
 
 .tab--content {
-  @include rem(height, $tab-content-height);
+  @include rem(min-height, $tab-content-height);
   @include rem(padding, $tab-content-padding);
   background-color: $tab-content-background;
   display: none;
-  overflow: scroll;
   width: 100%;
 
   @include media($tablet) {

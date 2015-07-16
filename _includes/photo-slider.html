@@ -1,0 +1,11 @@
+{% if images %}
+  <section class="page--section reset-padding-bottom">
+    <ul class="slider--images">
+      {% for image in page.images == blank %}
+        <li class="slider--images-item editable">
+          <img src="{{image.url}}" alt="{{image.alt}}">
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
