@@ -160,6 +160,7 @@ $image-slider-margin:             0 10px;
   @include rem(height, 40px);
   @include rem(width, 40px);
   @include transition(all 0.2s ease-in);
+  @include transform(translateY(-40%));
   background: url('../images/icons/next-button-icon.svg') no-repeat;
   background-size: 100%;
   display: block;
@@ -167,7 +168,6 @@ $image-slider-margin:             0 10px;
   text-indent: -99999px;
 
   @include media($tablet) {
-    @include position(absolute, 20% null null null);
     @include rem(height, 50px);
     @include rem(width, 50px);
   }

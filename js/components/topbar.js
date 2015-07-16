@@ -7,6 +7,7 @@ $(function() {
     $('.dropdown-trigger').on('click', function (e) {
       e.preventDefault();
       $(this).siblings('.sub-menu').toggleClass('is-active');
+
     });
 
     $('.sub-menu').bind('mousewheel', function(e){
