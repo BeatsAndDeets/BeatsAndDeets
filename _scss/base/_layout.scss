@@ -9,7 +9,7 @@ $page-header-height:        650px;
 $page-header-height-small:  550px;
 $page-header-offset:        100px;
 
-$page-header-mobile-height: 575px;
+$page-header-mobile-height: 375px;
 
 $page-section-padding:      50px 0;
 
@@ -46,14 +46,16 @@ body {
   @include clearfix;
   @include position(relative);
   @include rem(height, $page-header-mobile-height);
-  background: $blue-base center no-repeat;
+  background: $blue-base center center no-repeat;
   @include background-size(cover);
   overflow: hidden;
 
   @include media($tablet-landscape) {
     @include rem(height, $page-header-height);
 
-    &.small { @include rem(height, $page-header-height-small); }
+    &.small {
+      @include rem(height, $page-header-height-small);
+    }
   }
 
   &::after {
@@ -87,9 +89,9 @@ body {
   }
 
   @include media($tablet-landscape) {
-    @include span-columns(6 of 12);
-    @include shift(3 of 12);
-    top: 125px;
+    @include span-columns(8 of 12);
+    @include shift(2 of 12);
+    top: 120px;
   }
 
   .title,
@@ -106,7 +108,12 @@ body {
     @include media($tablet) { @include s-giga; }
   }
 
-  .description {  @include rem(padding, 0 50px); @include s-delta; }
+  .description {
+    @include media($tablet-landscape) {
+      @include rem(padding, 0 100px);
+      @include s-delta;
+    }
+  }
 }
 
 .page--section-content__center {

@@ -1,16 +1,34 @@
 <section class="page--section tan">
   <div class="page--section-container service">
     <div class="service--content-left">
-      <img src="{{site.baseurl}}/images/services/photography-sample-img.jpg">
+      <img src="{{page.details_photo}}">
     </div>
     <div class="service--content-right">
       <ul class="tabs">
         {% for detail in page.details %}
           <li class="tab">
-          <a href="#" class="tab--link">{{ detail.title }}</a>
-          <div class="tab--content">
-            <p class="tab--content__paragraph">{{ detail.description }}</p>
-          </div>
+            <a href="#" class="tab--link">{{ detail.title }}</a>
+            <div class="tab--content">
+              {% if detail.featured_contents %}
+                <ul class="featured--content">
+                  {% for featured_content in detail.featured_contents %}
+                    <li class="featured--content-item">
+                      <div class="featured--content__left">
+                        <img src="{{featured_content.image}}" />
+                      </div>
+                      <div class="featured--content__right">
+                        <h5 class="featured--content-title">{{ featured_content.title }}</h5>
+                        <p>{{ featured_content.description }}</p>
+                        <a href="{{site.baseurl}}/about" class="link--secondary uppercase">Learn more</a><br>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              {% if detail.description %}
+                <p class="tab--content__paragraph">{{ detail.description }}</p>
+              {% endif %}
+            </div>
           </li>
         {% endfor %}
       </ul>

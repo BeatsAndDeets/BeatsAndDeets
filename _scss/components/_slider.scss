@@ -3,7 +3,7 @@
 
 
 // Variables
-$carousel-offset:                 0 auto 50px;
+$carousel-offset:                 0 auto;
 
 $content-slider-background:       $orange-base;
 $content-slider-padding:          100px 30px;
@@ -50,8 +50,6 @@ $image-slider-margin:             0 10px;
     }
   }
 
-
-
   .title--border {
     @include rem(height, 4px);
     @include rem(width, 100px);
@@ -62,6 +60,14 @@ $image-slider-margin:             0 10px;
     margin: 0 auto;
   }
 
+
+  .owl-prev,
+  .owl-next {
+    @include position(absolute, 10% null null null);
+    @include transform(translateY(-10%));
+  }
+
+  .owl-next{ @include transform(rotate(180deg)) }
 }
 
 .slider--images {
@@ -155,12 +161,12 @@ $image-slider-margin:             0 10px;
 }
 
 .owl-prev,
-.owl-next{
-  @include position(absolute, 40% null null null);
+.owl-next {
+  @include position(absolute, 45% null null null);
   @include rem(height, 40px);
   @include rem(width, 40px);
   @include transition(all 0.2s ease-in);
-  @include transform(translateY(-40%));
+  @include transform(translateY(-45%));
   background: url('../images/icons/next-button-icon.svg') no-repeat;
   background-size: 100%;
   display: block;

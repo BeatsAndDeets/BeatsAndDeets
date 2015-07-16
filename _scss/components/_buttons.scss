@@ -50,6 +50,7 @@
 
   // Links
   .link--#{$type} {
+    @include font-type($primary-serif, normal, 600);
     @include transition(all 0.3s ease-in-out);
     color: $bg-1;
     font-style: inherit;
