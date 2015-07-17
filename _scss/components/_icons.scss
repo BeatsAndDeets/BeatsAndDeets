@@ -75,7 +75,7 @@ $service-icons:  '../images/icons/services-sprite.svg';
 
 %service-icon {
   background-image: url($service-icons);
-  background-size: 1100px 200px;
+  background-size: 1200px 200px;
   background-repeat: no-repeat;
   display: inline-block;
   height: $service-height;
@@ -94,7 +94,8 @@ $services: (
   innovation     $service-width * 7,
   theme          $service-width * 8,
   video          $service-width * 9,
-  website        $service-width * 10
+  website        $service-width * 10,
+  bartending     $service-width * 11
 );
 
 @each $service in $services {

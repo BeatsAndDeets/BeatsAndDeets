@@ -39,7 +39,8 @@ $grid-item-active-background:  $orange-base;
       margin-right: 0;
     }
 
-    &:last-child { border-bottom: none; }
+    &:last-child,
+    &:nth-last-child(2) { border-bottom: none; }
   }
 
   @include media($tablet-landscape) {
@@ -52,7 +53,7 @@ $grid-item-active-background:  $orange-base;
       border-right: $grid-item-border;
     }
 
-    &:nth-last-child(-n+2) { border-bottom: none; }
+    &:nth-last-child(-n+3) { border-bottom: none; }
   }
 
   @include media($tablet-landscape) {

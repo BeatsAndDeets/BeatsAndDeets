@@ -140,6 +140,8 @@ $mobile-panel-link-color: $black-base;
     border-bottom: 1px solid $grey-light;
     display: block;
     margin: 0;
+
+    &:last-child{ border-bottom: none; }
   }
 
   &.is-active{ display: block; }

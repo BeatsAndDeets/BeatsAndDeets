@@ -9,7 +9,7 @@ $page-header-height:        650px;
 $page-header-height-small:  550px;
 $page-header-offset:        100px;
 
-$page-header-mobile-height: 375px;
+$page-header-mobile-height: 400px;
 
 $page-section-padding:      50px 0;
 
@@ -44,27 +44,32 @@ body {
 // Page Header
 .page--header {
   @include clearfix;
-  @include position(relative);
   @include rem(height, $page-header-mobile-height);
   background: $blue-base center center no-repeat;
   @include background-size(cover);
   overflow: hidden;
 
-  @include media($tablet-landscape) {
+  &::after {
+    @include position(absolute, 0 0 0 0);
+    @include rem(height, $page-header-mobile-height);
+    background-color: $black-base;
+    display: block;
+    opacity: 0.65;
+
+    @include media($tablet) {
+      @include rem(height, $page-header-height);
+    }
+  }
+
+  @include media($tablet) {
     @include rem(height, $page-header-height);
 
     &.small {
       @include rem(height, $page-header-height-small);
+      &::after { @include rem(height, $page-header-height-small); }
     }
   }
 
-  &::after {
-    @include position(absolute, 0 0 0 0);
-    @include rem(height, $page-header-height);
-    background-color: $black-base;
-    display: block;
-    opacity: 0.65;
-  }
 }
 
 .page--header__color {
@@ -73,6 +78,11 @@ body {
   @include rem(height, $page-header-height-small);
   background-color: $blue-base;
   overflow: hidden;
+}
+
+.page--header-container {
+  @include position(relative);
+  @include outer-container;
 }
 
 .page--header-content {
@@ -102,15 +112,15 @@ body {
   }
 
   .title {
-    @include s-mega;
+    @include s-alpha;
     text-transform: uppercase;
 
     @include media($tablet) { @include s-giga; }
   }
 
   .description {
-    @include media($tablet-landscape) {
-      @include rem(padding, 0 100px);
+    @include media($tablet) {
+      @include rem(padding, 0 50px);
       @include s-delta;
     }
   }

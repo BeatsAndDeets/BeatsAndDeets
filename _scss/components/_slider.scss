@@ -81,7 +81,7 @@ $image-slider-margin:             0 10px;
     }
 
     @include media($tablet-landscape) {
-      @include rem(height, 500px);
+      @include rem(height, 650px);
     }
 
     img { width: 100%; }
@@ -162,20 +162,21 @@ $image-slider-margin:             0 10px;
 
 .owl-prev,
 .owl-next {
-  @include position(absolute, 45% null null null);
+  @include position(absolute, 40% null null null);
   @include rem(height, 40px);
   @include rem(width, 40px);
   @include transition(all 0.2s ease-in);
-  @include transform(translateY(-45%));
+  @include transform(translateY(-40%));
   background: url('../images/icons/next-button-icon.svg') no-repeat;
   background-size: 100%;
-  display: block;
+  display: none !important;
   opacity: 0.7;
   text-indent: -99999px;
 
   @include media($tablet) {
     @include rem(height, 50px);
     @include rem(width, 50px);
+    display: block !important;
   }
 
   &:hover{ opacity: 1; }
