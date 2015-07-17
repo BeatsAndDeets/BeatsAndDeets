@@ -18,21 +18,24 @@ $member-info-padding:     30px;
 // Member Card
 
 .member {
+  @include clearfix;
   @include perspective(1000);
-  @include rem(margin-bottom, 25px);
   @include rem(min-height, $member-card-height);
   @include span-columns(4 of 4);
+  margin-bottom: 25%;
+
+  &:nth-child(2n){ margin-right: 0; }
 
   img { width: 100%; }
 
   @include media($tablet) {
-    @include span-columns(2 of 4);
-
-    &:nth-child(2n){ margin-right: 0; }
+    @include span-columns(6 of 12);
+    margin-bottom: 18%;
   }
 
   @include media($tablet-landscape) {
     @include span-columns(4 of 12);
+    margin-bottom: 2%;
 
     &:nth-child(2n){ margin-right: 2.35765%; }
     &:nth-child(3n){ margin-right: 0; }
@@ -54,6 +57,7 @@ $member-info-padding:     30px;
 .member--back {
   @include position(absolute, 0 null null 0);
   @include backface-visibility(hidden);
+  width: 100%;
 }
 
 .member--front {
