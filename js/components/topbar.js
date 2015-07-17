@@ -6,8 +6,14 @@ $(function() {
   $(function () {
     $('.dropdown-trigger').on('click', function (e) {
       e.preventDefault();
-      $(this).siblings('.sub-menu').toggleClass('is-active');
+      e.stopPropagation();
+      $(this).siblings('.sub-menu').addClass('is-active');
+    });
 
+    $('.sub-menu').bind('mouseleave', function (e) {
+      $(this).fadeOut('slow', function () {
+        $(this).removeClass('is-active');
+      });
     });
 
     $('.sub-menu').bind('mousewheel', function(e){

@@ -124,7 +124,7 @@ $mobile-panel-link-color: $black-base;
 
 
 .sub-menu{
-  @include animation(fade-in 0.2s ease-in);
+  @include animation(fade-out 0.5s ease-out);
   @include box-shadow(0 3px 10px, rgba(0, 0, 0, 0.3));
   @include position(absolute, 30px null null -100px);
   @include rem(padding, 0 10px 10px);
@@ -144,7 +144,10 @@ $mobile-panel-link-color: $black-base;
     &:last-child{ border-bottom: none; }
   }
 
-  &.is-active{ display: block; }
+  &.is-active{
+    @include animation(fade-in 0.3s ease-in);
+    display: block !important;
+  }
 }
 
 

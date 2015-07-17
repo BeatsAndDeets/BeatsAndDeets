@@ -1,0 +1,82 @@
+// About Styles
+// ========================================
+
+
+// Variables
+$member-card-height:      352px;
+
+$member-name-background:  $blue-base;
+$member-name-color:       $white-base;
+$member-name-padding:     15px 0;
+
+$member-image-margin:     0 0 -5px;
+
+$member-info-background:  $orange-base;
+$member-info-padding:     30px;
+
+
+// Member Card
+
+.member {
+  @include perspective(1000);
+  @include rem(min-height, $member-card-height);
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(2 of 4);
+  }
+
+  @include media($tablet-landscape) {
+    @include span-columns(4 of 12);
+  }
+}
+
+.member:hover .member--content,
+.member.hover .member--content {
+  @include transform(rotateY(180deg));
+}
+
+.member--content {
+  @include position(relative);
+  @include transform-style(preserve-3d);
+  @include transition(all 0.4s ease-in-out);
+}
+
+.member--front,
+.member--back {
+  @include position(absolute, 0 null null 0);
+  @include backface-visibility(hidden);
+}
+
+.member--front {
+  @include transform(rotateY(0deg));
+  z-index: 2;
+}
+
+.member--back {
+  @include rem(padding, $member-info-padding);
+  @include rem(min-height, $member-card-height);
+  @include transform(rotateY(180deg));
+  background-color: $member-info-background;
+  color: $white-base;
+
+  .button {
+    @include rem(margin-top, 20px);
+    display: block;
+  }
+}
+
+
+// Member Card Details
+.member--image {
+  @include rem(margin, $member-image-margin);
+  width: 100%;
+}
+
+.member--name  {
+  @include rem(padding, $member-name-padding);
+  background-color: $member-name-background;
+  color: $member-name-color;
+  margin: 0;
+  text-align: center;
+}
