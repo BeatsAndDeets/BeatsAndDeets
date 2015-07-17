@@ -175,3 +175,14 @@ body {
 
   &.blue { background-color: $title-border-color-alt; }
 }
+
+.page--content__left,
+.page--content__right {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+  }
+
+  img { width: 100%; }
+}

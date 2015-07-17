@@ -19,15 +19,23 @@ $member-info-padding:     30px;
 
 .member {
   @include perspective(1000);
+  @include rem(margin-bottom, 25px);
   @include rem(min-height, $member-card-height);
   @include span-columns(4 of 4);
 
+  img { width: 100%; }
+
   @include media($tablet) {
     @include span-columns(2 of 4);
+
+    &:nth-child(2n){ margin-right: 0; }
   }
 
   @include media($tablet-landscape) {
     @include span-columns(4 of 12);
+
+    &:nth-child(2n){ margin-right: 2.35765%; }
+    &:nth-child(3n){ margin-right: 0; }
   }
 }
 

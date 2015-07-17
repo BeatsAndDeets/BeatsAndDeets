@@ -10,8 +10,8 @@ $service-content-height:     380px;
 // Structure
 .service {
 
-  .service--content-left,
-  .service--content-right {
+  .service--content__left,
+  .service--content__right {
     @include rem(min-height, $service-content-height);
     @include span-columns(4 of 4);
     background-color: $service-content-background;
@@ -24,7 +24,7 @@ $service-content-height:     380px;
     img { width: 100%; }
   }
 
-  .service--content-left { background-color: $tan-base; }
+  .service--content__left { background-color: $tan-base; }
 }
 
 .featured--content-item {
