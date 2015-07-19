@@ -7,7 +7,7 @@ $carousel-offset:                 0 auto;
 
 $content-slider-background:       $orange-base;
 $content-slider-padding:          100px 30px;
-$content-slider-mobile-padding:   50px 30px;
+$content-slider-mobile-padding:   40px 20px;
 
 $image-slider-margin:             0 10px;
 
@@ -46,6 +46,7 @@ $image-slider-margin:             0 10px;
     width: 100%;
 
     .title {
+      @include s-alpha;
       color: $white-base;
     }
   }

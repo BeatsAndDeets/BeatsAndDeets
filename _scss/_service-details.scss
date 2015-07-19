@@ -12,12 +12,12 @@ $service-content-height:     380px;
 
   .service--content__left,
   .service--content__right {
-    @include rem(min-height, $service-content-height);
     @include span-columns(4 of 4);
-    background-color: $service-content-background;
+    // background-color: $service-content-background;
     overflow: hidden;
 
     @include media($tablet) {
+      @include rem(min-height, $service-content-height);
       @include span-columns(6 of 12);
     }
 

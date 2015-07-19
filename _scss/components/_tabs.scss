@@ -59,13 +59,13 @@ $tab-content-padding:    20px;
 }
 
 .tab--content {
-  @include rem(min-height, $tab-content-height);
   @include rem(padding, $tab-content-padding);
   background-color: $tab-content-background;
   display: none;
   width: 100%;
 
   @include media($tablet) {
+    @include rem(min-height, $tab-content-height);
     float: left;
   }
 }

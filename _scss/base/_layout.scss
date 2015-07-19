@@ -9,7 +9,7 @@ $page-header-height:        650px;
 $page-header-height-small:  550px;
 $page-header-offset:        100px;
 
-$page-header-mobile-height: 400px;
+$page-header-mobile-height: 500px;
 
 $page-section-padding:      50px 0;
 
@@ -48,6 +48,11 @@ body {
   background: $blue-base center center no-repeat;
   @include background-size(cover);
   overflow: hidden;
+
+  &.small {
+    @include rem(height, $page-header-height-small - 150px);
+    &::after { @include rem(height, $page-header-height-small - 150px); }
+  }
 
   &::after {
     @include position(absolute, 0 0 0 0);

@@ -72,7 +72,11 @@ a {
 
 blockquote {
   @include font-type($primary-sans-serif, normal, 700);
-  @include s-bravo;
+  @include s-delta;
+
+  @include media($tablet-landscape) {
+    @include s-bravo;
+  }
 }
 
 cite {

@@ -117,7 +117,7 @@ $feature-icons:   '../images/icons/about-sprite.svg';
 
 %feature-icon {
   @include rem(height, $feature-height);
-  @include rem(margin, 0 10px 40px 0);
+  @include rem(margin, 0 10px 50px 0);
   @include rem(width, $feature-width);
   background-image: url($feature-icons);
   background-size: 457px 76px;

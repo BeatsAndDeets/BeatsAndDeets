@@ -4,6 +4,7 @@
 
 // Variables
 $venue-card-height:               250px;
+$venue-card-height-mobile:        300px;
 
 $venue-title-border-background:   $blue-base;
 $venue-title-border-height:       6px;
@@ -16,13 +17,14 @@ $venue-image-height:              150px;
 // Structure
 .venue {
   @include position(relative);
-  @include rem(height, $venue-card-height);
+  @include rem(height, $venue-card-height-mobile);
   @include span-columns(4 of 4);
   @include transition(all 0.5s ease-in-out);
   overflow: hidden;
   text-align: center;
 
   @include media($tablet) {
+    @include rem(height, $venue-card-height);
     @include span-columns(6 of 12);
 
     &:nth-child(2n) { @include omega(); }
@@ -35,7 +37,9 @@ $venue-image-height:              150px;
   .title {
     @include position(relative);
     @include rem(padding, $venue-title-padding);
-    @include s-bravo;
+    @include s-delta;
+
+    @include media($tablet) { @include s-bravo; }
 
     &::after {
       @include position(absolute, null 0 -4px 0);
