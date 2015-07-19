@@ -39,6 +39,10 @@ $price-cost-padding:         10px;
 
       &:nth-child(2) { margin-right: 2.35765%; }
     }
+
+    &.price--shift {
+      @include shift(1.5 of 12);
+    }
   }
 }
 
