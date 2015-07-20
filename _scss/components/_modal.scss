@@ -1,0 +1,108 @@
+// Modal Component
+// ========================================
+
+$modal-background:        $white-base;
+$modal-border-radius:     0;
+$modal-image-height:      135px;
+$modal-image-width:       $modal-image-height;
+$modal-margin:            50px 10px 0;
+$modal-padding:           0;
+
+$modal-header-background: $white-base;
+
+$modal-close-background:  $grey-light;
+$modal-close-color:       $tan-dark;
+
+
+// Stucture
+.modal {
+
+  input[type="checkbox"] { display: none; }
+
+  .modal-open { overflow: hidden; }
+
+  .modal-window {
+    @include transition(opacity .25s ease);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 999999;
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      z-index: 99998;
+    }
+
+    .modal-container{
+      @include position(relative, null null null null);
+      margin: auto;
+      margin-top: 0.8em;
+      z-index: 99999;
+
+      @include media($tablet) {
+        width:  90%;
+        max-height: 60%;
+        margin-top: 5em;
+      }
+
+      @include media($desktop) {
+        width: 900px;
+        margin-top: 5em;
+      }
+    }
+  }
+
+  // Modal Body
+  .modal-body{
+    @include clearfix;
+    @include position(relative);
+    @include rem(height, 550px);
+    @include rem(margin, $modal-margin);
+    @include rem(padding, $modal-padding);
+    background: $modal-background;
+    border-bottom-left-radius: $modal-border-radius;
+    border-bottom-right-radius: $modal-border-radius;
+    overflow: scroll;
+
+    @include media($tablet) { margin: 0; }
+    @include media($tablet-landscape) { height: 600px; }
+  }
+
+  .modal-close {
+    @include position(absolute, 10px 10px null null);
+    @include size(3em);
+    background: $modal-close-background;
+    border-radius: 30em;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      @include position(absolute, 13px 3px 0 50%);
+      @include transform(rotate(45deg));
+      @include size(0.15em 1.5em);
+      background: $modal-close-color;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: darken($modal-close-color, 10%);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  // Modal Visibility
+  .modal-state:checked + .modal-window {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-window .modal-inner { top: 0; }
+ }

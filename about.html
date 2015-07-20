@@ -38,7 +38,7 @@ header_image: ../../images/headers/about-header.jpg
             </div>
             <div class="member--back">
                <p>{{ member.bio | truncate: 250 }}</p>
-               <a href="#" class="button button--outline__white">Read More</a>
+               <label for="{{member.id}}" class="button button--outline__white modal--trigger">Read More</label>
             </div>
           </div>
         </li>
@@ -64,3 +64,6 @@ header_image: ../../images/headers/about-header.jpg
     </div>
   </div>
 </section>
+{% for member in site.data.members %}
+  {% include member-modal.html %}
+{% endfor %}

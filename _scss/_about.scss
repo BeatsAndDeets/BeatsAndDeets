@@ -92,3 +92,62 @@ $member-info-padding:     30px;
   margin: 0;
   text-align: center;
 }
+
+
+// Member Details
+.member-details__left {
+  @include rem(height, 350px);
+  float: none;
+  overflow: hidden;
+  width: 100%;
+
+  @include media($tablet-landscape) {
+    @include rem(margin-bottom, -2px);
+    @include span-columns(6 of 12);
+    height: 100%;
+  }
+
+  .member-detail--image {
+    width: 100%;
+  }
+}
+
+.member-details__right {
+  @include rem(padding, 0 20px);
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include rem(height, 600px);
+    @include rem(padding, 30px 20px 10px 0);
+    @include span-columns(6 of 12);
+    overflow: scroll;
+  }
+}
+
+.member-details--group {
+  @include rem(margin, 30px auto);
+
+  .title {
+    @include s-charlie;
+    color: $tan-dark;
+  }
+}
+
+.member-details--name {
+  @include font-type($primary-serif, normal, 400);
+  color: $orange-base;
+}
+
+.member-details-services {
+  height: 50px;
+}
+
+.member-details--icon {
+  display: inline;
+
+  .icon {
+    @include rem(height, 47px);
+    @include rem(width, 47px);
+    background-size: auto;
+  }
+}
