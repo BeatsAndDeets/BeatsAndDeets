@@ -13,7 +13,6 @@ $service-content-height:     380px;
   .service--content__left,
   .service--content__right {
     @include span-columns(4 of 4);
-    // background-color: $service-content-background;
     overflow: hidden;
 
     @include media($tablet) {

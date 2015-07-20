@@ -1,11 +1,19 @@
 {% if page.images %}
-  <section class="page--section reset-padding-bottom">
-    <ul class="slider--images">
-      {% for image in page.images %}
-        <li class="slider--images-item editable">
-          <img src="{{image.url}}" alt="{{image.alt}}">
-        </li>
-      {% endfor %}
-    </ul>
+  <section class="page--section">
+    <div class="page--section-container">
+      <header class="page--section-header">
+        <h4 class="page--section-title editable">Samples Of Our Work</h4>
+        <hr class="title--border" />
+      </header>
+      <ul>
+        {% for image in page.images %}
+          <li class="lightbox--image editable">
+            <a href="{{image.url}}" data-lightbox="{{image.data_title}}">
+              <img src="{{image.url}}" alt="{{image.alt}}">
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </section>
 {% endif %}
