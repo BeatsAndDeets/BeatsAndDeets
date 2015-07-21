@@ -41,7 +41,9 @@ $price-cost-padding:         10px;
     }
 
     &.price--shift {
-      @include shift(1.5 of 12);
+      @include media($tablet-landscape) {
+        @include shift(1.5 of 12);
+      }
     }
   }
 }
