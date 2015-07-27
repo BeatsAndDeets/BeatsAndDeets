@@ -5,7 +5,12 @@
       <hr class="title--border">
     </header>
     <div class="page--section-content">
-      <p class="page--section-content__center center inverse editable">We don’t really believe in prepacked pricing as every event is different and demands different solutions. We also know that budgets are an important part of the planning process. We have included a variety of packages to help you get a sense of your investment.</p>
+      <p class="page--section-content__center center inverse editable">
+        {% if page.pricing_blurb %}
+          {{ page.pricing_blurb }}
+        {% else %}
+          We don’t really believe in prepacked pricing as every event is different and demands different solutions. We also know that budgets are an important part of the planning process. We have included a variety of packages to help you get a sense of your investment.</p>
+        {% endif %}
       <ul class="prices">
         {% for price in page.prices %}
           <li class="price card">

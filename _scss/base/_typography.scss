@@ -70,6 +70,10 @@ a {
   }
 }
 
+small {
+  @include s-golf;
+}
+
 blockquote {
   @include font-type($primary-sans-serif, normal, 700);
   @include s-delta;

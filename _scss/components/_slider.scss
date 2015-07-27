@@ -64,8 +64,8 @@ $image-slider-margin:             0 10px;
 
   .owl-prev,
   .owl-next {
-    @include position(absolute, 10% null null null);
-    @include transform(translateY(-10%));
+    @include position(absolute, 25% null null null);
+    @include transform(translateY(-25%));
   }
 
   .owl-next{ @include transform(rotate(180deg)) }
@@ -163,11 +163,11 @@ $image-slider-margin:             0 10px;
 
 .owl-prev,
 .owl-next {
-  @include position(absolute, 40% null null null);
+  @include position(absolute, 50% null null null);
   @include rem(height, 40px);
   @include rem(width, 40px);
   @include transition(all 0.2s ease-in);
-  @include transform(translateY(-40%));
+  @include transform(translateY(-50%));
   background: url('../images/icons/next-button-icon.svg') no-repeat;
   background-size: 100%;
   display: none !important;

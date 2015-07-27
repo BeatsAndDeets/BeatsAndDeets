@@ -143,11 +143,12 @@ $member-info-padding:     30px;
 }
 
 .member-details--icon {
-  display: inline;
+  @include clearfix;
+  @include position(relative, -40px null null -25px);
+  @include rem(height, 100px);
+  @include rem(width, 45px);
+  @include transform(scale(0.5));
+  display: inline-block;
 
-  .icon {
-    @include rem(height, 47px);
-    @include rem(width, 47px);
-    background-size: auto;
-  }
+  &:first-child { margin-left: 10px; }
 }

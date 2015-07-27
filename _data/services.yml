@@ -26,9 +26,9 @@
   icon: planning
   url: planning
 
-- name: Innovation / Program Design
+- name: Invitation / Program Design
   icon: innovation
-  url: innovation
+  url: invitation
 
 - name: Theme Development
   icon: theme
