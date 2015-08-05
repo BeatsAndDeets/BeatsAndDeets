@@ -9,6 +9,9 @@ $page-header-height:        650px;
 $page-header-height-small:  550px;
 $page-header-offset:        100px;
 
+$page-header-offset:        120px;
+$page-header-mobile-offset: 80px;
+
 $page-header-mobile-height: 500px;
 
 $page-section-padding:      50px 0;
@@ -45,9 +48,22 @@ body {
 .page--header {
   @include clearfix;
   @include rem(height, $page-header-mobile-height);
+  @include rem(margin-top, $page-header-mobile-offset);
   background: $blue-base center center no-repeat;
   @include background-size(cover);
   overflow: hidden;
+
+
+  @include media($tablet) {
+    @include rem(height, $page-header-height);
+    @include rem(margin-top, $page-header-offset);
+
+
+    &.small {
+      @include rem(height, $page-header-height-small);
+      &::after { @include rem(height, $page-header-height-small); }
+    }
+  }
 
   &.small {
     @include rem(height, $page-header-height-small - 150px);
@@ -57,21 +73,14 @@ body {
   &::after {
     @include position(absolute, 0 0 0 0);
     @include rem(height, $page-header-mobile-height);
+    @include rem(margin-top, $page-header-mobile-offset);
     background-color: $black-base;
     display: block;
     opacity: 0.65;
 
     @include media($tablet) {
       @include rem(height, $page-header-height);
-    }
-  }
-
-  @include media($tablet) {
-    @include rem(height, $page-header-height);
-
-    &.small {
-      @include rem(height, $page-header-height-small);
-      &::after { @include rem(height, $page-header-height-small); }
+      @include rem(margin-top, $page-header-offset);
     }
   }
 
@@ -91,7 +100,7 @@ body {
 }
 
 .page--header-content {
-  @include position(absolute, 80px null null null);
+  @include position(absolute, null null null null);
   @include rem(padding, $page-header-offset 20px 0);
   @include span-columns(4 of 4);
   text-align: center;
@@ -100,13 +109,11 @@ body {
   @include media($tablet) {
     @include span-columns(8 of 9);
     @include shift(0.5 of 9);
-    top: 110px;
   }
 
   @include media($tablet-landscape) {
     @include span-columns(8 of 12);
     @include shift(2 of 12);
-    top: 120px;
   }
 
   .title,

@@ -19,7 +19,9 @@
                       <div class="featured--content__right">
                         <h5 class="featured--content-title">{{ featured_content.title }}</h5>
                         <p>{{ featured_content.description }}</p>
-                        <a href="{{site.baseurl}}/about" class="link--secondary uppercase">Learn more</a><br>
+                        {% if featured_content.link %}
+                          <a href="{{ featured_content.link }}" class="link--secondary uppercase">Learn more</a><br>
+                        {% endif %}
                       </div>
                     </li>
                   {% endfor %}
