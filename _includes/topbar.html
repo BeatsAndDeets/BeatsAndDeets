@@ -22,6 +22,7 @@
           </ul>
         </li>
         <div class="mobile--show">
+          <li class="nav-link"><a href="{{ site.baseurl }}/">Home</a></li>
           <li class="nav-link"><a href="{{ site.baseurl }}/services">View All Services</a></li>
           {% for service in site.data.services %}
             <li class="nav-link"><a href="{{site.baseurl}}/services/{{service.url}}">{{ service.name }}</a></li>

@@ -5,14 +5,10 @@
 // Variables
 $page-header-background:    $blue-base;
 $page-header-color:         $white-base;
-$page-header-height:        650px;
-$page-header-height-small:  550px;
-$page-header-offset:        100px;
-
-$page-header-offset:        120px;
-$page-header-mobile-offset: 80px;
-
-$page-header-mobile-height: 500px;
+$page-header-height:        500px;
+$page-header-mobile-height: 425px;
+$page-header-offset:        110px;
+$page-header-mobile-offset: 50px;
 
 $page-section-padding:      50px 0;
 
@@ -28,11 +24,7 @@ html,
 body {
   overflow-x: hidden;
 
-  &.is-fixed {
-    @include position(absolute);
-    height: 100%;
-    overflow: hidden;
-  }
+  &.is-fixed { overflow-y: hidden; }
 }
 
 
@@ -53,21 +45,9 @@ body {
   @include background-size(cover);
   overflow: hidden;
 
-
   @include media($tablet) {
     @include rem(height, $page-header-height);
     @include rem(margin-top, $page-header-offset);
-
-
-    &.small {
-      @include rem(height, $page-header-height-small);
-      &::after { @include rem(height, $page-header-height-small); }
-    }
-  }
-
-  &.small {
-    @include rem(height, $page-header-height-small - 150px);
-    &::after { @include rem(height, $page-header-height-small - 150px); }
   }
 
   &::after {
@@ -89,7 +69,8 @@ body {
 .page--header__color {
   @include clearfix;
   @include position(relative);
-  @include rem(height, $page-header-height-small);
+  @include rem(height, $page-header-height);
+  @include rem(margin-top, $page-header-offset);
   background-color: $blue-base;
   overflow: hidden;
 }
@@ -121,11 +102,13 @@ body {
     @include rem(margin-bottom, 20px);
     @include text-shadow(0 2px 3px, rgba(0, 0, 0, 0.5));
     color: $page-header-color;
+
   }
 
   .title {
     @include s-alpha;
     text-transform: uppercase;
+    widows: 2;
 
     @include media($tablet) { @include s-giga; }
   }
