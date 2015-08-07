@@ -61,6 +61,11 @@ $price-cost-padding:         10px;
   color: $price-title-alt-color;
 }
 
+.price--list {
+  @include rem(margin, 0 20px);
+  list-style-type: disc;
+}
+
 .price--cost {
   @include rem(padding, $price-cost-padding);
   background-color: $price-cost-background;
@@ -73,10 +78,8 @@ $price-cost-padding:         10px;
   @include rem(margin-bottom, 10px);
   @include s-foxtrot;
   line-height: normal;
-
-  &::before {
-    content: "•  "; // Space was intended
-  }
+  text-align: left;
+  widows: 3;
 }
 
 .price--button {

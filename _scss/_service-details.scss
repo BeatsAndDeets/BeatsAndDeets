@@ -4,7 +4,7 @@
 
 // Variables
 $service-content-background: $white-base;
-$service-content-height:     380px;
+$service-content-height:     390px;
 
 
 // Structure
@@ -20,7 +20,10 @@ $service-content-height:     380px;
       @include span-columns(6 of 12);
     }
 
-    img { width: 100%; }
+    img {
+      height: $service-content-height;
+      overflow: hidden;
+    }
   }
 
   .service--content__left { background-color: $tan-base; }
@@ -53,7 +56,7 @@ $service-content-height:     380px;
     @include span-columns(4 of 12);
   }
 
-  img { width: 100%; }
+  img { width: 100%; height: auto !important; }
 }
 
 .featured--content__right {

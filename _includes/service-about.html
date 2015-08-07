@@ -10,25 +10,30 @@
             <a href="#" class="tab--link">{{ detail.title }}</a>
             <div class="tab--content">
               {% if detail.featured_contents %}
-                <ul class="featured--content">
-                  {% for featured_content in detail.featured_contents %}
-                    <li class="featured--content-item">
-                      <div class="featured--content__left">
-                        <img src="{{featured_content.image}}" />
-                      </div>
-                      <div class="featured--content__right">
-                        <h5 class="featured--content-title">{{ featured_content.title }}</h5>
-                        <p>{{ featured_content.description }}</p>
-                        {% if featured_content.link %}
-                          <a href="{{ featured_content.link }}" class="link--secondary uppercase">Learn more</a><br>
-                        {% endif %}
-                      </div>
-                    </li>
-                  {% endfor %}
-                </ul>
+                <div id="tab--wrap">
+                  <ul class="featured--content">
+                    {% for featured_content in detail.featured_contents %}
+                      <li class="featured--content-item">
+                        <div class="featured--content__left">
+                          <img src="{{featured_content.image}}" />
+                        </div>
+                        <div class="featured--content__right">
+                          <h5 class="featured--content-title">{{ featured_content.title }}</h5>
+                          <p>{{ featured_content.description }}</p>
+                          {% if featured_content.link %}
+                            <a href="{{ featured_content.link }}#team" class="link--secondary uppercase">Learn more</a><br>
+                          {% endif %}
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div id="read-more"></div>
               {% endif %}
               {% if detail.description %}
-                <p class="tab--content__paragraph">{{ detail.description }}</p>
+                <p class="tab--content__paragraph" id="tab--wrap">{{ detail.description }}
+                </p>
+                <div id="read-more"></div>
               {% endif %}
             </div>
           </li>

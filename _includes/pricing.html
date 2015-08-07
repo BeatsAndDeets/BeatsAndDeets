@@ -1,7 +1,7 @@
 <section class="page--section blue">
   <div class="page--section-container">
     <header class="page--section-header">
-      <h4 class="page--section-title inverse editable">Wedding Prepackaged Pricing</h4>
+      <h4 class="page--section-title inverse editable">Wedding and Event Prepackaged Pricing</h4>
       <hr class="title--border">
     </header>
     <div class="page--section-content">
@@ -20,7 +20,7 @@
             {% endif %}
             <ul>
               {% for detail in price.details %}
-                <li>
+                <li class="price--list">
                   {% if detail.alt_price %}
                     <h5 class="price--title__alt">{{ detail.alt_price }}</h5>
                   {% endif %}
@@ -32,7 +32,7 @@
         {% endfor %}
       </ul>
       <footer class="page--section-content__center center">
-        <small class="inverse editable">* Ask about our referral discount – For every friend that you refer that books a wedding with us, you receive $100 off your Dj services or $50...CASH MONEY!! <br>
+        <small class="inverse editable">* Ask about our referral discount – For every friend that you refer that books a wedding with us, you receive $100 off your Dj services or $50...CASH MONEY!! <br><br>
         ** Combine with other services and receive even deeper dicounts!</small><br>
         <a href="{{site.baseurl}}/contact" role="button" class="button button--outline__white button__long price--button editable">{{page.prices_action}}</a>
       </footer>

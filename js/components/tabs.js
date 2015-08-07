@@ -19,3 +19,29 @@ $(document).ready(function () {
     }
   });
 });
+
+$(function(){
+  var slideHeight = 225; // px
+  var defHeight = $('#tab--wrap').height();
+  if(defHeight >= slideHeight){
+    $('#tab--wrap').css('height' , slideHeight + 'px');
+    $('#read-more').append('<a href="#">Read More</a>');
+    $('#read-more a').click(function(){
+      var curHeight = $('#tab--wrap').height();
+      if(curHeight == slideHeight){
+        $('#tab--wrap').animate({
+          height: defHeight
+        }, "normal");
+        $('#read-more a').html('Close');
+        $('#tab--gradient').fadeOut();
+      } else {
+        $('#tab--wrap').animate({
+          height: slideHeight
+        }, "normal");
+        $('#read-more a').html('Read More');
+        $('#tab--gradient').fadeIn();
+      }
+      return false;
+    });
+  }
+});

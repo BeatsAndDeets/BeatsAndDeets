@@ -5,7 +5,8 @@ $(function () {
     items: 1,
     loop: true,
     center: true,
-    nav: true
+    nav: true,
+    autoHeight: true
   });
 
   // Image Slider

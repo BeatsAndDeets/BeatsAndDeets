@@ -59,6 +59,7 @@ $tab-content-padding:    20px;
 }
 
 .tab--content {
+  @include position(relative);
   @include rem(padding, $tab-content-padding);
   background-color: $tab-content-background;
   display: none;
@@ -70,3 +71,21 @@ $tab-content-padding:    20px;
   }
 }
 
+.tab--content__paragraph { @include rem(margin-bottom, 40px); }
+
+
+// Overflow
+#tab--wrap {
+  overflow: hidden;
+}
+
+#read-more {
+  @include font-type($primary-serif, normal, 400);
+  @include position(absolute, null 0 0 0);
+  @include rem(padding, 15px);
+  @include s-echo;
+  background: $tab-content-background;
+  color: $orange-base;
+  display: block;
+  text-align: center;
+}

@@ -27,7 +27,6 @@ $image-slider-margin:             0 10px;
   @include rem(margin-bottom, 50px);
   @include rem(padding, $content-slider-mobile-padding);
   background-color: $content-slider-background;
-  text-align: center;
 
   @include media($tablet) {
     @include rem(padding, $content-slider-padding);
@@ -36,6 +35,7 @@ $image-slider-margin:             0 10px;
   .slider--content-item {
     color: $white-base;
     margin: 0 auto;
+    text-align: left;
     width: 80%;
   }
 

@@ -9,10 +9,12 @@ $lightbox-container-background:  $white-base;
 $lightbox-container-dimensions:  250px;
 
 $lightbox-image-dimensions:      100px;
+$lightbox-image-height:          200px;
 
 
 // Structure
 .lightbox--image {
+  @include rem(height, $lightbox-image-height);
   @include rem(margin-bottom, 20px);
   @include rem(padding, 5px 5px 1px);
   @include span-columns(4 of 4);
@@ -25,7 +27,11 @@ $lightbox-image-dimensions:      100px;
     overflow: hidden;
   }
 
-  img { width: 100%; }
+  img {
+    height: 98%;
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 
