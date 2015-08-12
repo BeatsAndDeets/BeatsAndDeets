@@ -8,7 +8,7 @@ $price-title-color:          $tan-dark;
 $price-title-alt-color:      $orange-base;
 
 $price-item-height-tablet:   400px;
-$price-item-height-desktop:  460px;
+$price-item-height-desktop:  530px;
 
 $price-cost-background:      $orange-base;
 $price-cost-border-radius:   2px;
@@ -64,6 +64,8 @@ $price-cost-padding:         10px;
 .price--list {
   @include rem(margin, 0 20px);
   list-style-type: disc;
+
+  .price--title__alt & { list-style: none; }
 }
 
 .price--cost {
