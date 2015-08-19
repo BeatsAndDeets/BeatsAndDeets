@@ -1,47 +1,39 @@
 - name: DJ
   icon: dj
   url: dj
-
 - name: Uplighting
   icon: uplighting
   url: uplighting
-
 - name: Musicians
   icon: musicians
   url: musicians
-
 - name: Photobooth
   icon: photobooth
   url: photobooth
-
 - name: Photography
   icon: photography
   url: photography
-
 - name: Wedding Officiant
   icon: officiant
   url: officiant
-
 - name: Event Planning / Coordination
   icon: planning
   url: planning
-
 - name: Invitation / Program Design
   icon: innovation
   url: invitation
-
 - name: Theme Development
   icon: theme
   url: theme
-
 - name: Video Production
   icon: video
   url: video
-
 - name: Event Website Design
   icon: website
   url: website
-
 - name: Bartending
   icon: bartending
   url: bartending
+- name: Fun
+  icon: fun
+  url: fun
