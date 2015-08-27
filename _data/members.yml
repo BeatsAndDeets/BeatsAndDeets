@@ -1,7 +1,7 @@
 - name: Adam Ryan
   id: adam
   bio: "Welcome to Beats and Deets. Adam Ryan is the founder that comes from a background of 14 years of Art Direction in the creative industry as well as 20 years of Djing as an independent contractor. He is directly responsible for pairing the best team members to satisfy your needs. His specialties include but not limited to, DJ Services, Uplighting, Photobooths, Event Planning/Coordination, Invitation and Program design, Theme Development, and Video Production. He comes with an eager and creative personality ready to make your event the best it could possibly be while working within your budget and vision."
-  image: /images/members/adam-detail-img.jpg
+  image: /images/members/adam.jpg
   image_detail: adam-detail-img.jpg
   services:
     - icon: dj
@@ -14,42 +14,42 @@
 - name: Bear and Jake
   id: bear
   bio: "Bear & Jake Acoustic are an acoustic duo, playing a diverse & unique catalog of recognizable, upbeat cover songs -- arranged acoustically. They distinguish themselves from other cover bands by always maintaining a balance of different genres, their vast catalog of current/classic songs, and by incorporating unique song choices that are always tailored to the audience. If you are looking to add live music to your event, don’t pass on Bear and Jake. They would be a great addition for a cocktail or dinner hour. They will even custom tailor any song for your wedding specialty dances with a 3-week lead time."
-  image: /images/members/imagesoon-detail-img.jpg
+  image: /images/members/imagesoon.jpg
   image_detail: Imagesoon-detail-img.jpg
   services:
     - icon: musicians
 - name: Jen Sacia
   id: jen
   bio: "Jen loves photography for as long as she can remember and it was something she always wanted to pursue. In 2004 she graduated from RIT with a bachelor's degree in photography.  She became even more passionate about it with the birth of her own children. She has become obsessed with capturing as many moments as possible to remember them as they grow.  Her style is casual and candid. She prefers to capture your event naturally, not posed, to give you lasting memories that you can look back on with a smile."
-  image: /images/members/jensacia-detail-img.jpg
+  image: /images/members/jensacia.jpg
   image_detail: jensacia-detail-img.jpg
   services:
     - icon: photography
 - name: Erik Peterson
   id: erik
   bio: "Erik Peterson is a wedding officiant who was ordained by a non denominational clergy, Rose Ministries, on August 18th , 2009.  He will work with you to create a custom tailored ceremony that is heartfelt, sincere and suited to your wishes. He doesn’t just work off a template. He likes to get to know you so he can learn your personalities and also discover what you want your perfect ceremony to be. Traditional or modern, religious or civil, humorous or conservative, he can make the ceremony of your marriage that you help create which will be forever memorable."
-  image: /images/members/erikpeterson-detail-img.jpg
+  image: /images/members/erikpeterson.jpg
   image_detail: erikpeterson-detail-img.jpg
   services:
     - icon: officiant
 - name: Jen Slaton
   id: jen-slaton
   bio: "Jen is our night owl, spending many of her nights learning code and staying on top of web development trends. She is self taught and driven to deliver a perfect event website that will make your life a lot easier when it comes to event management. She also can do personal and business websites to suite whatever needs you may have. Her skills don’t just stop there. She also has her hands in our invitation design service as well."
-  image: /images/members/jenslaton-detail-img.jpg
+  image: /images/members/jenslaton.jpg
   image_detail: jenslaton-detail-img.jpg
   services:
     - icon: website
 - name: Jesse
   id: jesse
   bio: "Jesse is our resident bartender. He is eager to help at parties to give you more time to enjoy your own party as a guest rather than a host. He does everything with a smile and his customer service is unmatched.  By the end of the night your guests will be calling him by name, as his margaritas are one of a kind. Having a theme party? His innovative concoctions paired to your theme are sure to dazzle your guests!"
-  image: /images/members/imagesoon-detail-img.jpg
+  image: /images/members/imagesoon.jpg
   image_detail: Imagesoon-detail-img.jpg
   services:
     - icon: bartending
 - name: Elisa Peterson
   id: elisa
   bio: "Elisa has her hands in our invitation and graphics services. She comes to us with oodles of creativity ready to create custom, hand drawn invitations to whatever styling fits your personality. Every invite us unique and one of a kind that will be designed to seamlessly merge with whatever vision you can come up with. !She can also do custom T-Shirt designs for your event.  It’s a great way to commemorate a significant event and to give your guests a takeaway to remember the event."
-  image: /images/members/elisa-detail-img.jpg
+  image: /images/members/elisa.jpg
   image_detail: Elisa-detail-img.jpg
   services:
     - icon: photography
