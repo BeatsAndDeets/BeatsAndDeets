@@ -39,24 +39,17 @@
   image_detail: jenslaton-detail-img.jpg
   services:
     - icon: website
-- name: Bryanne Ryan
-  id: bryanne
-  bio: "Bryanne comes to us from being in the catering and event planning industry for the last 12 years. Her years of service are for The Art Institute – Chicago, as well as Catigny Golf Course in Wheaton, IL. She is extremely organized; creative, and connected to get done whatever it is you dream up. She has planned anything from weddings, corporate functions, to smaller events like meeting, birthdays and baby showers. If you want to sit back and relax, Bry will put you at ease with her passion for perfection and dedication to customer satisfaction."
-  image: adam-test.jpg
-  image_detail: adam-detail-img.jpg
-  services:
-    - icon: planning
 - name: Jesse
   id: jesse
   bio: "Jesse is our resident bartender. He is eager to help at parties to give you more time to enjoy your own party as a guest rather than a host. He does everything with a smile and his customer service is unmatched.  By the end of the night your guests will be calling him by name, as his margaritas are one of a kind. Having a theme party? His innovative concoctions paired to your theme are sure to dazzle your guests!"
-  image: adam-test.jpg
-  image_detail: adam-detail-img.jpg
+  image: /images/members/imagesoon-detail-img.jpg
+  image_detail: Imagesoon-detail-img.jpg
   services:
     - icon: bartending
 - name: Elisa Peterson
   id: elisa
   bio: "Elisa has her hands in our invitation and graphics services. She comes to us with oodles of creativity ready to create custom, hand drawn invitations to whatever styling fits your personality. Every invite us unique and one of a kind that will be designed to seamlessly merge with whatever vision you can come up with. !She can also do custom T-Shirt designs for your event.  It’s a great way to commemorate a significant event and to give your guests a takeaway to remember the event."
-  image: adam-test.jpg
-  image_detail: adam-detail-img.jpg
+  image: /images/members/elisa-detail-img.jpg
+  image_detail: Elisa-detail-img.jpg
   services:
     - icon: photography
