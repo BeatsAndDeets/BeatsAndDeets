@@ -1,7 +1,7 @@
 - name: Adam Ryan
   id: adam
   bio: "Welcome to Beats and Deets. Adam Ryan is the founder that comes from a background of 14 years of Art Direction in the creative industry as well as 20 years of Djing as an independent contractor. He is directly responsible for pairing the best team members to satisfy your needs. His specialties include but not limited to, DJ Services, Uplighting, Photobooths, Event Planning/Coordination, Invitation and Program design, Theme Development, and Video Production. He comes with an eager and creative personality ready to make your event the best it could possibly be while working within your budget and vision."
-  image: /images/members/adam-detail-img.jpg
+  image: /images/members/adam.jpg
   image_detail: adam-detail-img.jpg
   services:
     - icon: dj
