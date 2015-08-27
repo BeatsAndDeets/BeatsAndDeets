@@ -42,7 +42,7 @@
 - name: Jesse
   id: jesse
   bio: "Jesse is our resident bartender. He is eager to help at parties to give you more time to enjoy your own party as a guest rather than a host. He does everything with a smile and his customer service is unmatched.  By the end of the night your guests will be calling him by name, as his margaritas are one of a kind. Having a theme party? His innovative concoctions paired to your theme are sure to dazzle your guests!"
-  image: /images/members/imagesoon-detail-img.jpg
+  image: /images/members/imagesoon.jpg
   image_detail: Imagesoon-detail-img.jpg
   services:
     - icon: bartending
