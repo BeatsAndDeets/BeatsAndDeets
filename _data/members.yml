@@ -15,7 +15,7 @@
   id: bear
   bio: "Bear & Jake Acoustic are an acoustic duo, playing a diverse & unique catalog of recognizable, upbeat cover songs -- arranged acoustically. They distinguish themselves from other cover bands by always maintaining a balance of different genres, their vast catalog of current/classic songs, and by incorporating unique song choices that are always tailored to the audience. If you are looking to add live music to your event, don’t pass on Bear and Jake. They would be a great addition for a cocktail or dinner hour. They will even custom tailor any song for your wedding specialty dances with a 3-week lead time. <br> <br> <a href='/images/bear-and-jake-setlist.pdf' target='_blank' class='link--primary'>View Bear & Jake's set list</a>"
   image: /images/members/imagesoon.jpg
-  image_detail: Imagesoon-detail-img.jpg
+  image_detail: imagesoon-detail-img.jpg
   services:
     - icon: musicians
 - name: Jen Sacia
@@ -43,7 +43,7 @@
   id: jesse
   bio: "Jesse is our resident bartender. He is eager to help at parties to give you more time to enjoy your own party as a guest rather than a host. He does everything with a smile and his customer service is unmatched.  By the end of the night your guests will be calling him by name, as his margaritas are one of a kind. Having a theme party? His innovative concoctions paired to your theme are sure to dazzle your guests!"
   image: /images/members/imagesoon.jpg
-  image_detail: Imagesoon-detail-img.jpg
+  image_detail: imagesoon-detail-img.jpg
   services:
     - icon: bartending
 - name: Elisa Peterson
