@@ -48,12 +48,11 @@ html.modal-open {
       @include media($tablet) {
         width:  90%;
         max-height: 60%;
-        margin-top: 5em;
+        margin-top: 3.5em;
       }
 
       @include media($desktop) {
         width: 900px;
-        margin-top: 5em;
       }
     }
   }
