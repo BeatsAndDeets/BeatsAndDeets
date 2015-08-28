@@ -21,7 +21,7 @@ $(document).ready(function () {
 });
 
 $(function(){
-  var slideHeight = 225; // px
+  var slideHeight = 220; // px
   var defHeight = $('#tab--wrap').height();
   if(defHeight >= slideHeight){
     $('#tab--wrap').css('height' , slideHeight + 'px');

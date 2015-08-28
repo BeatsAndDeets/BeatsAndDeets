@@ -70,3 +70,7 @@ $service-content-height:     390px;
     @include span-columns(8 of 12);
   }
 }
+
+.featured--content-title {
+  @include rem(margin-bottom, 8px);
+}

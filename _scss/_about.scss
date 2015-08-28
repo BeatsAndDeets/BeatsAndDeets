@@ -120,7 +120,6 @@ $member-info-padding:     30px;
     @include rem(height, 600px);
     @include rem(padding, 30px 20px 10px 0);
     @include span-columns(6 of 12);
-    overflow: scroll;
   }
 }
 
@@ -135,20 +134,27 @@ $member-info-padding:     30px;
 
 .member-details--name {
   @include font-type($primary-serif, normal, 400);
+  @include rem(margin-bottom, 30px);
   color: $orange-base;
 }
 
 .member-details-services {
-  height: 50px;
+  height: 30px;
 }
 
 .member-details--icon {
   @include clearfix;
   @include position(relative, -40px null null -25px);
   @include rem(height, 100px);
-  @include rem(width, 45px);
-  @include transform(scale(0.5));
+  @include rem(width, 30px);
+  @include transform(scale(0.35));
   display: inline-block;
+
+  @include media($tablet) {
+    @include rem(height, 100px);
+    @include rem(width, 45px);
+    @include transform(scale(0.5));
+  }
 
   &:first-child { margin-left: 10px; }
 }

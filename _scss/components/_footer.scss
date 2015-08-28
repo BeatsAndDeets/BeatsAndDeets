@@ -42,6 +42,10 @@ $footer-link-mobile-margin:  10px 20px;
   }
 }
 
+.footer--social {
+  .footer--navigation-link { display: inline; }
+}
+
 .footer--footnote {
   @include font-type($primary-sans-serif, normal, 400);
   @include s-hotel;
