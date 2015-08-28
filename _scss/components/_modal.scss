@@ -34,26 +34,34 @@ html.modal-open {
     visibility: hidden;
     z-index: 999999;
 
+    @include media($tablet) {
+      height: 100%;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+
     .modal-bg {
       @include position(absolute, 0px 0px 0px 0px);
       z-index: 99998;
     }
 
     .modal-container{
+      @include rem(margin-bottom, 60px);
       @include position(relative, null null null null);
       margin: auto;
-      margin-top: 0.8em;
+      height: 100%;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
       z-index: 99999;
 
       @include media($tablet) {
         width:  90%;
         max-height: 60%;
         margin-top: 3.5em;
+        overflow: visible;
       }
 
-      @include media($desktop) {
-        width: 900px;
-      }
+      @include media($desktop) { width: 900px; }
     }
   }
 
@@ -61,15 +69,16 @@ html.modal-open {
   .modal-body{
     @include clearfix;
     @include position(relative);
-    @include rem(height, 550px);
-    @include rem(margin, $modal-margin);
     @include rem(padding, $modal-padding);
     background: $modal-background;
     border-bottom-left-radius: $modal-border-radius;
     border-bottom-right-radius: $modal-border-radius;
-    overflow: scroll;
 
-    @include media($tablet) { margin: 0; }
+    @include media($tablet) {
+      @include rem(height, 550px);
+      @include rem(margin, $modal-margin);
+    }
+
     @include media($tablet-landscape) { height: 600px; }
   }
 

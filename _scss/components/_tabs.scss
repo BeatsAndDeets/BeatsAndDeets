@@ -71,7 +71,7 @@ $tab-content-padding:    20px;
   }
 }
 
-.tab--content__paragraph { @include rem(margin-bottom, 40px); }
+.tab--content__paragraph { @include rem(margin-bottom, 50px); }
 
 
 // Overflow
@@ -82,7 +82,7 @@ $tab-content-padding:    20px;
 #read-more {
   @include font-type($primary-serif, normal, 400);
   @include position(absolute, null 0 0 0);
-  @include rem(padding, 15px);
+  @include rem(padding, 22px);
   @include s-echo;
   background: $tab-content-background;
   color: $orange-base;

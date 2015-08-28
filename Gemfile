@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "uglifier"
+gem 'uglifier'
 gem "sass"
 
 gem 'github-pages'
