@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link href="{{site.baseurl}}/images/favicon.png" rel="shortcut icon">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  </head>
+  <style type="text/css">
+    .page--header { background-image: url('{{page.mobile_header_image}}'); }
+    @media screen and (min-width: 720px) {
+      .page--header { background-image: url('{{page.header_image}}'); }
+    }
+  </style>
   <body>
     {% include topbar.html %}
     <main role="main" class="page page__service">
