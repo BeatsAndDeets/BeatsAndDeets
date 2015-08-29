@@ -2,7 +2,7 @@
 // ========================================
 
 $modal-background:        $white-base;
-$modal-border-radius:     0;
+$modal-border-radius:     2px;
 $modal-image-height:      135px;
 $modal-image-width:       $modal-image-height;
 $modal-margin:            50px 10px 0;
@@ -10,76 +10,61 @@ $modal-padding:           0;
 
 $modal-header-background: $white-base;
 
-$modal-close-background:  $grey-light;
+$modal-close-background:  $tan-base;
 $modal-close-color:       $tan-dark;
 
 
 // Stucture
 html.modal-open {
   overflow-y: hidden;
+  height: 100%;
 }
 
 .modal {
 
   input[type="checkbox"] { display: none; }
 
-  .modal-open { overflow: hidden; }
-
   .modal-window {
     @include transition(opacity .25s ease);
-    @include position(fixed, 0px 0px 0px 0px);
+    @include position(fixed, 0 0 0 0);
     background: rgba(0, 0, 0, 0.85);
     opacity: 0;
+    overflow: scroll;
     text-align: left;
     visibility: hidden;
     z-index: 999999;
 
-    @include media($tablet) {
-      height: 100%;
-      overflow: scroll;
-      -webkit-overflow-scrolling: touch;
-    }
-
     .modal-bg {
-      @include position(absolute, 0px 0px 0px 0px);
+      @include position(absolute, 0 0 0 0);
       z-index: 99998;
     }
 
     .modal-container{
-      @include rem(margin-bottom, 60px);
       @include position(relative, null null null null);
-      margin: auto;
+      @include rem(padding, 20px);
       height: 100%;
-      overflow: scroll;
-      -webkit-overflow-scrolling: touch;
+      margin: auto;
       z-index: 99999;
 
       @include media($tablet) {
         width:  90%;
-        max-height: 60%;
-        margin-top: 3.5em;
+        margin-top: 5em;
         overflow: visible;
+        padding: 0;
       }
 
-      @include media($desktop) { width: 900px; }
+      @include media($desktop) { max-width: 68em; }
     }
   }
 
   // Modal Body
   .modal-body{
     @include clearfix;
-    @include position(relative);
     @include rem(padding, $modal-padding);
     background: $modal-background;
-    border-bottom-left-radius: $modal-border-radius;
-    border-bottom-right-radius: $modal-border-radius;
-
-    @include media($tablet) {
-      @include rem(height, 550px);
-      @include rem(margin, $modal-margin);
-    }
-
-    @include media($tablet-landscape) { height: 600px; }
+    border-radius: $modal-border-radius;
+    margin: 0 auto;
+    min-height: 350px;
   }
 
   .modal-close {
