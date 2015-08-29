@@ -30,7 +30,7 @@ header_image: ../images/headers/about-header.jpg
     <div class="members--container">
       <ul class="members">
         {% for member in site.data.members %}
-        <li class="member" ontouchstart="this.classList.toggle('hover');">
+        <li class="member">
           <div class="member--content">
             <div class="member--front">
               <img src="{{site.baseurl}}{{member.image}}" alt="{{member.name}} Beats And Deets" class="member--image" />
