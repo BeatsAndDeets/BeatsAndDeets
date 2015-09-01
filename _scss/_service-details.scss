@@ -33,7 +33,6 @@ $service-content-height:     390px;
   @include clearfix;
 
   &:not(:first-child) {
-    @include rem(margin-top, 25px);
     @include rem(padding-top, 25px);
     border-top: 1px solid $tan-base;
   }
