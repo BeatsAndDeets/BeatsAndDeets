@@ -14,8 +14,8 @@
 - name: Bear and Jake
   id: bear
   bio: "Bear & Jake Acoustic are an acoustic duo, playing a diverse & unique catalog of recognizable, upbeat cover songs -- arranged acoustically. They distinguish themselves from other cover bands by always maintaining a balance of different genres, their vast catalog of current/classic songs, and by incorporating unique song choices that are always tailored to the audience. If you are looking to add live music to your event, don’t pass on Bear and Jake. They would be a great addition for a cocktail or dinner hour. They will even custom tailor any song for your wedding specialty dances with a 3-week lead time. <br> <br> <a href='/images/bear-and-jake-setlist.pdf' target='_blank' class='link--primary'>View Bear & Jake's set list</a>"
-  image: /images/members/imagesoon.jpg
-  image_detail: imagesoon-detail-img.jpg
+  image: /images/members/bearandjake.jpg
+  image_detail: bearandjake-detail-img.jpg
   services:
     - icon: musicians
 - name: Jen Sacia
@@ -27,7 +27,7 @@
     - icon: photography
 - name: Erik Peterson
   id: erik
-  bio: "Erik Peterson is a wedding officiant who was ordained by a non denominational clergy, Rose Ministries, on August 18th , 2009.  He will work with you to create a custom tailored ceremony that is heartfelt, sincere and suited to your wishes. He doesn’t just work off a template. He likes to get to know you so he can learn your personalities and also discover what you want your perfect ceremony to be. Traditional or modern, religious or civil, humorous or conservative, he can make the ceremony of your marriage that you help create which will be forever memorable."
+  bio: "Erik Peterson is a wedding officiant who was ordained by a non denominational clergy, Rose Ministries, on August 18th , 2009.  He will work with you to create a custom tailored ceremony that is heartfelt, sincere and suited to your wishes. He doesn’t just work off a template. He likes to get to know you so he can learn your personalities and also discover what you want your perfect ceremony to be. Traditional or modern, religious or civil, humorous or conservative, he can make the ceremony of your marriage one that you help create which will be forever memorable."
   image: /images/members/erikpeterson.jpg
   image_detail: erikpeterson-detail-img.jpg
   services:
@@ -46,9 +46,9 @@
   image_detail: imagesoon-detail-img.jpg
   services:
     - icon: bartending
-- name: Elisa Peterson
+- name: Elisa Keane
   id: elisa
-  bio: "Elisa has her hands in our invitation and graphics services. She comes to us with oodles of creativity ready to create custom, hand drawn invitations to whatever styling fits your personality. Every invite us unique and one of a kind that will be designed to seamlessly merge with whatever vision you can come up with. !She can also do custom T-Shirt designs for your event.  It’s a great way to commemorate a significant event and to give your guests a takeaway to remember the event."
+  bio: "Elisa has her hands in our invitation and graphics services. She comes to us with oodles of creativity ready to create custom, hand drawn invitations to whatever styling fits your personality. Every invite is unique and one of a kind that will be designed to seamlessly merge with whatever vision you can come up with. She can also do custom T-Shirt designs for your event.  It’s a great way to commemorate a significant event and to give your guests a takeaway to remember the event."
   image: /images/members/elisa.jpg
   image_detail: elisa-detail-img.jpg
   services:
