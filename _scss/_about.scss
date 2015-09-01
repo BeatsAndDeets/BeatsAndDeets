@@ -3,7 +3,7 @@
 
 
 // Variables
-$member-card-height:      352px;
+$member-card-height:      360px;
 
 $member-name-background:  $blue-base;
 $member-name-color:       $white-base;
@@ -20,9 +20,8 @@ $member-info-padding:     30px;
 .member {
   @include clearfix;
   @include perspective(1000);
-  @include rem(min-height, $member-card-height);
+  @include rem(margin, 0 0 190px);
   @include span-columns(4 of 4);
-  margin-bottom: 25%;
 
   &:nth-child(2n){ margin-right: 0; }
 
@@ -30,12 +29,11 @@ $member-info-padding:     30px;
 
   @include media($tablet) {
     @include span-columns(6 of 12);
-    margin-bottom: 18%;
   }
 
   @include media($tablet-landscape) {
+    @include rem(margin, 0 0 160px);
     @include span-columns(4 of 12);
-    margin-bottom: 2%;
 
     &:nth-child(2n){ margin-right: 2.35765%; }
     &:nth-child(3n){ margin-right: 0; }
@@ -51,12 +49,15 @@ $member-info-padding:     30px;
   @include position(relative);
   @include transform-style(preserve-3d);
   @include transition(all 0.4s ease-in-out);
+  height: 0;
+  padding-bottom: 75%;
 }
 
 .member--front,
 .member--back {
   @include position(absolute, 0 null null 0);
   @include backface-visibility(hidden);
+  max-width: 640px;
   width: 100%;
 }
 
@@ -116,7 +117,7 @@ $member-info-padding:     30px;
   @include rem(padding, 0 20px);
   @include span-columns(4 of 4);
 
-  @include media($tablet) {
+  @include media($tablet-landscape) {
     @include rem(height, 600px);
     @include rem(padding, 30px 20px 10px 0);
     @include span-columns(6 of 12);

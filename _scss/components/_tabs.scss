@@ -82,7 +82,7 @@ $tab-content-padding:    20px;
 #read-more {
   @include font-type($primary-serif, normal, 400);
   @include position(absolute, null 0 0 0);
-  @include rem(padding, 22px);
+  @include rem(padding, 18px);
   @include s-echo;
   background: $tab-content-background;
   color: $orange-base;

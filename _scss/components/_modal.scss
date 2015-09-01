@@ -34,6 +34,8 @@ html.modal-open {
     visibility: hidden;
     z-index: 999999;
 
+    @include media($tablet-landscape) { overflow: hidden; }
+
     .modal-bg {
       @include position(absolute, 0 0 0 0);
       z-index: 99998;
