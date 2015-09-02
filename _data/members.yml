@@ -53,3 +53,10 @@
   image_detail: elisa-detail-img.jpg
   services:
     - icon: invitation
+- name: Carlos Rios
+  id: carlos
+  bio: "Carlos firmly believes life is a movie waiting to be captured and that there is a story to tell in every one of us. For him, images have always been the center of his life. When he was a teenager he decided to pack and leave his home country of Colombia to study Filmmaking and graduated with a BA in Film and Video from Columbia College. Becoming a photographer was a natural transition as he was always taking pictures of everything that crossed his path. Traveling is one of his passions which fuels his imagination with images of fresh sunsets, vibrant colors and new experiences. \nCarlos is always in pursue of capturing the small subtleties of life, the telling moment that will be played back like a classic movie for years to come."
+  image: /images/members/carlos.jpg
+  image_detail: carlosrios-detail-img.jpg
+  services:
+    - icon: photography
