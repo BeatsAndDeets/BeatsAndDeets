@@ -56,7 +56,7 @@
 - name: Carlos Rios
   id: carlos
   bio: "Elisa has her hands in our invitation and graphics services. She comes to us with oodles of creativity ready to create custom, hand drawn invitations to whatever styling fits your personality. Every invite is unique and one of a kind that will be designed to seamlessly merge with whatever vision you can come up with. She can also do custom T-Shirt designs for your event.  It’s a great way to commemorate a significant event and to give your guests a takeaway to remember the event."
-  image: ""
-  image_detail: elisa-detail-img.jpg
+  image: /images/members/carlos.jpg
+  image_detail: carlosrios-detail-img.jpg
   services:
-    - icon: invitation
+    - icon: photography
