@@ -73,6 +73,7 @@ $mobile-panel-link-color: $black-base;
     width: 200px;
 
     @include media($tablet-landscape) {
+      height: 69px;
       width: 225px;
     }
   }
