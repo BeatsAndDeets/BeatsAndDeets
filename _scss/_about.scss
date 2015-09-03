@@ -20,7 +20,7 @@ $member-info-padding:     30px;
 .member {
   @include clearfix;
   @include perspective(1000);
-  @include rem(margin, 0 0 190px);
+  @include rem(margin, 0 0 80px);
   @include span-columns(4 of 4);
 
   &:nth-child(2n){ margin-right: 0; }
@@ -32,7 +32,6 @@ $member-info-padding:     30px;
   }
 
   @include media($tablet-landscape) {
-    @include rem(margin, 0 0 160px);
     @include span-columns(4 of 12);
 
     &:nth-child(2n){ margin-right: 2.35765%; }
@@ -50,7 +49,7 @@ $member-info-padding:     30px;
   @include transform-style(preserve-3d);
   @include transition(all 0.4s ease-in-out);
   height: 0;
-  padding-bottom: 75%;
+  padding-bottom: 100%;
 }
 
 .member--front,
@@ -114,14 +113,29 @@ $member-info-padding:     30px;
 }
 
 .member-details__right {
-  @include rem(padding, 0 20px);
+  @include position(relative);
+  @include rem(padding, 0 20px 50px);
   @include span-columns(4 of 4);
+  overflow: hidden;
 
   @include media($tablet-landscape) {
     @include rem(height, 600px);
     @include rem(padding, 30px 20px 10px 0);
     @include span-columns(6 of 12);
+    overflow-y: scroll;
   }
+}
+
+.modal-close-bar {
+  @include font-type($primary-sans-serif, normal, 700);
+  @include position(absolute, null 0 -10px 0);
+  @include rem(padding, 15px);
+  @include s-echo;
+  background-color: $blue-base;
+  color: $white-base;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .member-details--group {
@@ -133,6 +147,7 @@ $member-info-padding:     30px;
   }
 }
 
+
 .member-details--name {
   @include font-type($primary-serif, normal, 400);
   @include rem(margin-bottom, 30px);
@@ -140,15 +155,16 @@ $member-info-padding:     30px;
 }
 
 .member-details-services {
-  height: 30px;
+  height: 15px;
+  @include media($tablet-landscape) { height: 30px; }
 }
 
 .member-details--icon {
   @include clearfix;
   @include position(relative, -40px null null -25px);
-  @include rem(height, 100px);
-  @include rem(width, 30px);
-  @include transform(scale(0.35));
+  @include rem(height, 80px);
+  @include rem(width, 25px);
+  @include transform(scale(0.3));
   display: inline-block;
 
   @include media($tablet) {

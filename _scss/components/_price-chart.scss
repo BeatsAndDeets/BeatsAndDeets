@@ -25,6 +25,7 @@ $price-cost-padding:         10px;
   .price {
     @include rem(margin, 30px auto);
     @include span-columns(4 of 4);
+    padding-bottom: 0;
     text-align: center;
 
     @include media($tablet) {
@@ -59,6 +60,7 @@ $price-cost-padding:         10px;
 .price--title__alt {
   @include rem(margin-bottom, 5px);
   color: $price-title-alt-color;
+  text-align: left;
 }
 
 .price--list {

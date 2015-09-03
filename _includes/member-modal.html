@@ -4,7 +4,7 @@
     <div class="modal-container">
       <div class="modal-inner">
         <div class="modal-body">
-          <div class="modal-close" for="{{member.id}}"></div>
+          <span class="modal-close" for="{{member.id}}"></span>
           <div class="member-details__left">
             <img src="{{site.baseurl}}/images/members/{{member.image_detail}}" alt="{{member.name}}" class="member-detail--image" />
           </div>
@@ -20,6 +20,7 @@
             <div class="member-details--group">
               <h6 class="title">About</h6>
               <p>{{member.bio}}</p>
+              <span class="modal-close-bar mobile--show" for="{{member.id}}">Close Details</span>
             </div>
           </div>
         </div>
