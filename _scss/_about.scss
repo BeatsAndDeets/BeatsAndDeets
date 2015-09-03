@@ -39,8 +39,7 @@ $member-info-padding:     30px;
   }
 }
 
-.member:hover .member--content,
-.member.hover .member--content {
+.member:hover .member--content {
   @include transform(rotateY(180deg));
 }
 
@@ -60,10 +59,10 @@ $member-info-padding:     30px;
   width: 100%;
 }
 
-.member--front {
-  @include transform(rotateY(0deg));
-  z-index: 2;
-}
+// .member--front {
+//   @include transform(rotateY(0deg));
+//   z-index: 2;
+// }
 
 .member--back {
   @include rem(padding, $member-info-padding);
