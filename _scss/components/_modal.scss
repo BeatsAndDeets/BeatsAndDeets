@@ -75,6 +75,7 @@ html.modal-open {
     background: $modal-close-background;
     border-radius: 30em;
     cursor: pointer;
+    z-index: 9999;
 
     &:after,
     &:before {

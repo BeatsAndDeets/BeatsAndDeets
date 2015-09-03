@@ -4,7 +4,7 @@
 
 // Variables
 $service-content-background: $white-base;
-$service-content-height:     390px;
+$service-content-height:     395px;
 
 
 // Structure
@@ -19,10 +19,20 @@ $service-content-height:     390px;
       @include rem(min-height, $service-content-height);
       @include span-columns(6 of 12);
     }
+  }
+
+  .service--content__left {
+
+    @include media($tablet) {
+      @include rem(height, $service-content-height);
+      overflow-y: hidden;
+    }
 
     img {
-      height: $service-content-height;
-      overflow: hidden;
+      width: 100%;
+      @include media($tablet) {
+        @include rem(min-height, $service-content-height);
+      }
     }
   }
 

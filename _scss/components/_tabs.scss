@@ -11,7 +11,7 @@ $tab-link-color-hover:   $blue-base;
 $tab-link-padding:       30px 20px;
 
 $tab-content-background: $white-base;
-$tab-content-height:     300px;
+$tab-content-height:     310px;
 $tab-content-padding:    20px;
 
 
@@ -71,7 +71,9 @@ $tab-content-padding:    20px;
   }
 }
 
-.tab--content__paragraph { @include rem(margin-bottom, 50px); }
+.tab--content__paragraph {
+  @include rem(margin-bottom, 50px);
+}
 
 
 // Overflow

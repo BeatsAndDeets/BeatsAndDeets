@@ -20,10 +20,10 @@
             {% endif %}
             <ul>
               {% for detail in price.details %}
+                {% if detail.alt_price %}
+                  <h5 class="price--title__alt">{{ detail.alt_price }}</h5>
+                {% endif %}
                 <li class="price--list">
-                  {% if detail.alt_price %}
-                    <h5 class="price--title__alt">{{ detail.alt_price }}</h5>
-                  {% endif %}
                   <p class="price--detail">{{ detail.item }}</p>
                 </li>
               {% endfor %}

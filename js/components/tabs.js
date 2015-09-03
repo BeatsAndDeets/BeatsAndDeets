@@ -21,16 +21,16 @@ $(document).ready(function () {
 });
 
 $(function(){
-  var slideHeight = 220; // px
+  var slideHeight = 220;
   var defHeight = $('#tab--wrap').height();
   if(defHeight >= slideHeight){
-    $('#tab--wrap').css('height' , slideHeight + 'px');
+    $('#tab--wrap').css('height', slideHeight + 'px');
     $('#read-more').append('<a href="#">Read More</a>');
     $('#read-more a').click(function(){
       var curHeight = $('#tab--wrap').height();
       if(curHeight == slideHeight){
         $('#tab--wrap').animate({
-          height: defHeight
+          height: defHeight + 20
         }, "normal");
         $('#read-more a').html('Close');
         $('#tab--gradient').fadeOut();

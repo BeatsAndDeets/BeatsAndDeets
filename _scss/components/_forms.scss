@@ -77,6 +77,7 @@ input[type="checkbox"]{
   @include rem(width, 17px);
   @include transition();
   background-color: $white-base;
+  background-size: 10px 10px;
   border: 1px solid $grey-base;
   border-radius: 2px;
   display: inline-block;

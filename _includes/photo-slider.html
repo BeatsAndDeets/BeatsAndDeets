@@ -1,4 +1,6 @@
-{% if page.images %}
+{% if page.images.size <= 1 %}
+  <!-- no images added yet -->
+{% else %}
   <section class="page--section">
     <div class="page--section-container">
       <header class="page--section-header">

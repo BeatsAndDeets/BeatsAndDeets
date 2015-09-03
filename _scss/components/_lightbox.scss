@@ -14,15 +14,16 @@ $lightbox-image-height:          200px;
 
 // Structure
 .lightbox--image {
-  @include rem(height, $lightbox-image-height);
   @include rem(margin-bottom, 20px);
   @include rem(padding, 5px 5px 1px);
   @include span-columns(4 of 4);
   background-color: $tan-base;
   border: 1px solid $tan-dark;
+  height: 100%;
 
   @include media($tablet) {
     @include omega(4n);
+    @include rem(height, $lightbox-image-height);
     @include span-columns(3 of 12);
     overflow: hidden;
   }
