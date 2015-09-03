@@ -55,14 +55,15 @@ $member-info-padding:     30px;
 .member--back {
   @include position(absolute, 0 null null 0);
   @include backface-visibility(hidden);
+  -ms-backface-visibility: hidden;
   max-width: 640px;
   width: 100%;
 }
 
-// .member--front {
-//   @include transform(rotateY(0deg));
-//   z-index: 2;
-// }
+.member--front {
+  @include transform(rotateY(0deg));
+  z-index: 2;
+}
 
 .member--back {
   @include rem(padding, $member-info-padding);
