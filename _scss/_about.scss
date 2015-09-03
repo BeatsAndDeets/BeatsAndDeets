@@ -128,11 +128,12 @@ $member-info-padding:     30px;
 
 .modal-close-bar {
   @include font-type($primary-sans-serif, normal, 700);
-  @include position(absolute, null 0 -10px 0);
+  @include position(absolute, null 0 0 0);
   @include rem(padding, 15px);
   @include s-echo;
   background-color: $blue-base;
   color: $white-base;
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
   width: 100%;

@@ -90,7 +90,7 @@ input[type="checkbox"]{
     border: 1px solid $orange-base;
 
     &:after{
-      @include position(absolute, 4px null null 2px);
+      @include position(absolute, 1px null null 2px);
       @include rem(width, 12px);
       @include transition(all 0.2s ease-in);
       background-image: url('../images/icons/checkmark-icon.svg');

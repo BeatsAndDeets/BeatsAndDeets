@@ -25,13 +25,13 @@ $price-cost-padding:         10px;
   .price {
     @include rem(margin, 30px auto);
     @include span-columns(4 of 4);
-    padding-bottom: 0;
     text-align: center;
 
     @include media($tablet) {
       @include rem(min-height, $price-item-height-tablet);
       @include span-columns(2 of 4);
       @include omega(2);
+      padding-bottom: 0;
     }
 
     @include media($tablet-landscape) {
