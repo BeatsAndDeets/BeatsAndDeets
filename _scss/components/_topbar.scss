@@ -71,7 +71,10 @@ $mobile-panel-link-color: $black-base;
     margin: 0 auto;
     width: 200px;
 
-    @include media($tablet-landscape) { width: 225px; }
+    @include media($tablet-landscape) {
+      height: 100%;
+      width: 225px;
+    }
   }
 }
 

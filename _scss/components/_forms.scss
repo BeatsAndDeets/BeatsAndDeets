@@ -89,7 +89,7 @@ input[type="checkbox"]{
   &:checked{
     border: 1px solid $orange-base;
 
-    &:after{
+    &::after{
       @include position(absolute, 1px null null 2px);
       @include rem(width, 12px);
       @include transition(all 0.2s ease-in);
