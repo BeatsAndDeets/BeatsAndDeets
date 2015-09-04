@@ -22,6 +22,7 @@ $member-info-padding:     30px;
   @include perspective(1000);
   @include rem(margin, 0 0 100px);
   @include span-columns(4 of 4);
+  @include transform-style(preserve-3d);
 
   &:nth-child(2n){ margin-right: 0; }
 
@@ -39,15 +40,13 @@ $member-info-padding:     30px;
   }
 }
 
-.member:hover .member--content {
-  @include transform(rotateY(180deg));
-}
+.member:hover .member--back { @include transform(rotateY(0deg)); }
+.member:hover .member--front { @include transform(rotateY(180deg)); }
 
 .member--content {
   @include position(relative);
   @include transform-style(preserve-3d);
   @include transition(all 0.4s ease-in-out);
-  height: 0;
   padding-bottom: 100%;
 }
 
@@ -55,7 +54,8 @@ $member-info-padding:     30px;
 .member--back {
   @include position(absolute, 0 null null 0);
   @include backface-visibility(hidden);
-  -ms-backface-visibility: hidden;
+  @include transform-style(preserve-3d);
+  @include transition(all 0.4s ease-in-out);
   max-width: 640px;
   width: 100%;
 }
@@ -68,7 +68,7 @@ $member-info-padding:     30px;
 .member--back {
   @include rem(padding, $member-info-padding);
   @include rem(min-height, $member-card-height);
-  @include transform(rotateY(180deg));
+  @include transform(rotateY(-180deg));
   background-color: $member-info-background;
   color: $white-base;
 

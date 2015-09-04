@@ -87,17 +87,9 @@ input[type="checkbox"]{
   &:hover{ cursor: pointer; }
 
   &:checked{
+    @include transition(border 0.2s ease-in);
+    background: url('../images/icons/checkmark-icon.svg') no-repeat center center;
     border: 1px solid $orange-base;
-
-    &::after{
-      @include position(absolute, 1px null null 2px);
-      @include rem(width, 12px);
-      @include transition(all 0.2s ease-in);
-      background-image: url('../images/icons/checkmark-icon.svg');
-      background-repeat: no-repeat;
-      border-radius: 2px;
-      content: '';
-      height: 100%;
-    }
+    border-radius: 2px;
   }
 }
