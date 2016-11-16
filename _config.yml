@@ -6,7 +6,6 @@ url: "http://BeatsAndDeets.Github.io/BeatsAndDeets"
 github:
   repo: "https://github.com/BeatsAndDeets/BeatsAndDeets.git"
 permalink: pretty
-relative_permalinks: true
 gems: []
 markdown: kramdown
 exclude:
